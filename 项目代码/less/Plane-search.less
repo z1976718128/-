@@ -1,0 +1,920 @@
+/*通用样式*/
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    background: #eaf0f3;
+}
+
+@red {
+    color: red;
+}
+
+.red {
+    background: red;
+}
+
+@yellow {
+    color: yellow;
+}
+
+.yellow {
+    background: yellow;
+}
+
+@green {
+    color: green;
+}
+
+.green {
+    background: green;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.list {
+    list-style: none;
+}
+
+
+/*头部logo开始*/
+
+.header-logo {
+    height: 90px;
+    margin: 0 auto;
+    padding: 13px 0;
+    box-sizing: border-box;
+}
+
+.nuomilog {
+    width: 175px;
+    height: 64px;
+    margin: 0px 37px;
+    background: url(../img/Thelogin-img/奇豆.gif) no-repeat 0px;
+    background-size: 100%;
+}
+
+.header-logo img {
+    margin-right: 30px;
+}
+
+.ctriplog {
+    margin-top: 12px;
+    width: 126px;
+    height: 43px;
+    background: url(../img/p-img/251692007078348258.png) no-repeat 0px;
+    background-size: 30%;
+}
+
+
+/*头部logo结束*/
+
+
+/*机票导航栏开始*/
+
+.P-ticket {
+    height: 44px;
+    margin: 0 auto;
+    background: #2577E3;
+}
+
+.P-ticket>ul {
+    list-style: none;
+    margin: 0 auto;
+    width: 1200px;    
+    height: 44px;
+}
+
+.P-ticket ul>li,
+.P-ticket ul>a {
+    line-height: 44px;
+    padding: 0 40px;
+    font-size: 20px;
+}
+
+.P-ticket ul>li:hover,
+.P-ticket ul>a:hover {
+    color: red;
+}
+
+.P-ticket ul>a {
+    color: #FCFCFC;
+    font-size: 15px;
+}
+
+.P-ticket ul>li>a {
+    color: #FCFCFC;
+}
+
+.lz {
+    background: #0053BE;
+}
+
+
+/*机票导航栏结束*/
+
+.header-wrap {
+    width: 1200px;
+    cursor: pointer;
+    margin: 0 auto;
+    height: 91px;
+}
+
+.header-wrap ul li {
+    font-size: 15px;
+    color: #767962;
+    margin: 0 60px;
+    list-style: none;
+    float: left;
+    height: 91px;
+    width: 15%;
+    text-align: center;
+    line-height: 91px;
+}
+
+.header-wrap ul li:hover {
+    color: red;
+}
+
+.header-wrap ul li:nth-child(1) {
+    color: #ff7d13;
+}
+
+.header-wrap .icon-feiji1 {
+    border: 2px solid #ccc;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.header-wrap-a {
+    height: 91px;
+    margin: 0 auto;
+    background: transparent;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+}
+
+.container-box {
+    width: 1000px;
+    margin: 0 auto;
+    min-width: 1260px;
+    background: #eaf0f3;
+}
+
+.container {
+    display: inline-block;
+    margin-left: 30px;
+    width: 780px;
+    height: 616px;
+    vertical-align: middle;
+}
+
+.container .container-Reserve {
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 8px;
+    width: 780px;
+    height: 90px;
+    line-height: 24px;
+    background: #fff9eb;
+    box-shadow: 2px 2px 12px 5px #ece3cd;
+}
+
+.container .container-Reserve i {
+    font-size: 10px;
+    color: #ff7d13;
+}
+
+.container .container-Reserve span {
+    margin: 3px 0;
+    color: #6c8291;
+    font-size: 12px;
+    width: 10px;
+    height: 10px;
+}
+
+.container-Passenger {
+    margin-top: 20px;
+}
+
+.container-Passenger .container-Pass {
+    width: 780px;
+    height: 27px;
+}
+
+.container-Passenger .container-Pass h3 {
+    margin-top: 10px;
+}
+
+.container-Passenger .container-identity {
+    vertical-align: middle;
+    margin-top: 10px;
+    background: white;
+    box-sizing: border-box;
+    padding: 30px;
+    width: 780px;
+    position: relative;
+    height: 210px;
+}
+
+.container-Passenger .container-identity .contai {
+    display: inline-block;
+    width: 461px;
+    height: 177px;
+}
+
+.container-Passenger .container-identity .contai .i-one {
+    position: absolute;
+    top: 45px;
+    left: 10px;
+}
+
+.container-Passenger .container-identity .contai .i-one {
+    color: #ccc;
+    font-size: 25px;
+}
+
+.container-Passenger .container-identity .contai .inpur-on {
+    padding: 20px 0 8px 0;
+    height: 18px;
+    width: 380px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.container-Passenger .container-identity .contai input:nth-of-type(1):focus {
+    outline: none;
+}
+
+.form {
+    cursor: pointer;
+    display: inline-block;
+    width: 135px;
+    height: 47px;
+    white-space: nowrap;
+}
+
+.form span {
+    font-size: 12px;
+    display: inline-block;
+    line-height: 60px;
+    width: 135px;
+    height: 47px;
+    position: relative;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.form span .icon-xiangxia {
+    width: 10px;
+    height: 5px;
+    position: absolute;
+    left: 110px;
+    top: 0px;
+    font-size: 15px;
+    color: #0053be;
+}
+
+.form input {
+    width: 255px;
+    height: 32px;
+    border-top: none;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.Pass-card {
+    margin-top: 15px;
+    vertical-align: middle;
+    font-size: 15px;
+    width: 90px;
+    height: 20px;
+}
+
+.Pass-card #hh {
+    color: red;
+}
+
+.Pass-card label {
+    cursor: pointer;
+}
+
+.add {
+    cursor: pointer;
+    width: 110px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.add-to {
+    display: inline-block;
+    width: 110px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 5px;
+    border: 1px solid blueviolet;
+}
+
+.add-to:hover {
+    background: red;
+    color: white;
+    border: none;
+}
+
+.contact {
+    width: 780px;
+    height: 101px;
+}
+
+.contact h3 {
+    display: inline-block;
+}
+
+.contact .contact-box {
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    background: white;
+    position: relative;
+    height: 67px;
+    padding: 10px;
+}
+
+.contact .contact-box #vv {
+    cursor: pointer;
+    width: 130px;
+    border-bottom: 1px solid #eeeeee;
+    border-width: 2px;
+    height: 43px;
+}
+
+.contact .contact-box .icon-xiangxia {
+    position: absolute;
+    color: #2577e3;
+    top: 10px;
+    left: 110px;
+}
+
+.contact .contact-box .hangbian1,
+.contact .contact-box .hangbian2 {
+    width: 279px;
+    border-width: 0px 0px 2px 0px;
+    height: 47px;
+}
+
+.contact .contact-box .hangbian1:focus,
+.contact .contact-box .hangbian2:focus {
+    outline: none;
+}
+
+.contact div:nth-child(1) {
+    width: 130px;
+    height: 47px;
+    line-height: 47px;
+}
+
+.contact div:nth-child(1) input {
+    width: 130px;
+    border: none;
+}
+
+.ne-step {
+    cursor: pointer;
+    display: inline-block;
+    width: 782px;
+    height: 52px;
+    text-align: center;
+    line-height: 52px;
+    border-radius: 10px;
+    background: #2277ee;
+    margin-bottom: 10px;
+}
+
+.ne-step:hover {
+    background: #135dc3;
+    color: white;
+}
+
+.foter {
+    width: 1217px;
+    height: 143px;
+    line-height: 120px;
+    text-align: center;
+}
+
+.foter p {
+    font-size: 17px;
+}
+
+.right-indent {
+    text-align: center;
+    line-height: 10px;
+    font-size: 25px;
+    opacity: 0.6;
+    color: #0047a2;
+    margin-top: 70px;
+    width: 246px;
+    height: 46px;
+}
+
+.divright {
+    margin-right: 15px;
+    background: white;
+    width: 400px;
+    height: 500px;
+}
+
+.divright .divright-time {
+    box-sizing: border-box;
+    padding: 20px 0;
+    width: 398px;
+    height: 171px;
+}
+
+.divright .divright-time .time {
+    font-size: 20px;
+    width: 398px;
+    height: 29px;
+    text-align: center;
+}
+
+.divright .divright-time .time i {
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.divright .divright-time .cangwei {
+    font-size: 14px;
+    color: #849bab;
+    width: 398px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.divright .divright-time .cangwei img {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.item2 {
+    position: relative;
+    width: 398px;
+    height: 60px;
+}
+
+.item2 span {
+    display: inline-block;
+}
+
+.item2 .con {
+    border-bottom: solid 1px #849bab;
+    width: 180px;
+    height: 36px;
+    position: absolute;
+    top: 10px;
+    left: 116px;
+    display: inline-block;
+}
+
+.item2 span:nth-of-type(1) {
+    display: inline-block;
+    width: 90px;
+    line-height: 30px;
+    height: 30px;
+    padding-left: 40px;
+}
+
+.item2 span:nth-of-type(2) {
+    width: 90px;
+    font-size: 12px;
+    line-height: 30px;
+    height: 30px;
+    padding-left: 20px;
+}
+
+.item2 span:nth-of-type(3) {
+    position: absolute;
+    left: 310px;
+    box-sizing: border-box;
+    top: 0px;
+    width: 90px;
+    font-size: 15px;
+    line-height: 30px;
+    padding-left: 20px;
+    text-align: center;
+    height: 30px;
+}
+
+.item2 span:nth-of-type(4) {
+    position: absolute;
+    left: 310px;
+    top: 30px;
+    width: 90px;
+    font-size: 12px;
+    line-height: 30px;
+    height: 30px;
+}
+
+.con-l {
+    position: relative;
+    margin: 5px auto 0px;
+    width: 148px;
+    height: 18px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.icon-web-icon- {
+    color: #849bab;
+    width: 10px;
+    height: 10px;
+}
+
+.icon-feiji2 {
+    position: absolute;
+    left: 65px;
+    top: 20px;
+    color: #849bab;
+    width: 10px;
+    height: 10px;
+}
+
+.radiu {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #849bab;
+    border-radius: 50%;
+    position: absolute;
+    top: 26px;
+    left: -20px;
+}
+
+.radiu2 {
+    position: absolute;
+    top: 26px;
+    left: 160px;
+    border-radius: 50%;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #849bab;
+}
+
+.right-footer {
+    box-sizing: border-box;
+    padding: 10px 30px;
+    width: 398px;
+    height: 244px;
+    color: #957d7d;
+}
+
+.right-footer .footer-box {
+    width: 100%;
+    height: 200px;
+}
+
+.right-footer .footer-box ul {
+    list-style: none;
+}
+
+.right-footer .footer-box ul li {
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.right-footer .footer-box ul li .left-f {
+    margin-left: 15px;
+    border-bottom: dashed 1px #CCCCCC;
+}
+
+.right-footer .footer-box ul .rightz {
+    float: right;
+}
+
+.regular {
+    position: absolute;
+    top: 55px;
+    right: 266px;
+    font-size: 12px;
+    opacity: 0;
+    color: red;
+}
+
+.te-w {
+    display: inline-block;
+    position: absolute;
+    top: 106px;
+    right: 250px;
+    font-size: 12px;
+    opacity: 0;
+    color: red;
+}
+
+.pp-o {
+    display: inline-block;
+    position: absolute;
+    top: 160px;
+    right: 245px;
+    font-size: 12px;
+    opacity: 0;
+    color: red;
+}
+
+.box-jj {
+    width: 600px;
+    height: 300px;
+    background: #ffffff;
+    border-radius: 20px;
+    position: fixed;
+    top: -50%;
+    box-shadow: 5px 5px 5px 5px #ccc;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6666;
+    text-align: center;
+    display: none;
+}
+
+.box-jj .box-uuu {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.Tips-box {
+    .fl;
+    box-sizing: border-box;
+    width: 350px;
+    border-radius: 20px;
+    height: 300px;
+    color: #ffbb21;
+    p {
+        padding: 10px 0;
+    }
+    hr {
+        margin: 0 auto;
+        width: 85%;
+    }
+}
+
+.form-box {
+    margin: 10px 0;
+    width: 350px;
+    height: 200px;
+    color: #b19dff;
+    div {
+        .fl;
+        #dd {
+            margin-left: 20px;
+        }
+    }
+}
+
+.register {
+    color: black;
+    width: 350px;
+    height: 150px;
+    .cent {
+        text-align: center;
+        .oo {
+            font-size: 12px;
+        }
+    }
+    div {
+        margin-left: 25px;
+    }
+    label {
+        margin-right: 20px;
+    }
+    input {
+        outline: 1px solid #CCCCCC;
+    }
+}
+
+#deng {
+    margin: 20px 0;
+    width: 150px;
+    height: 20px;
+}
+
+.zhu-span:hover,
+.oo:hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.pp>span {
+    font-size: 12px;
+    color: blueviolet;
+}
+
+#pp {
+    .fl;
+}
+
+#lu {
+    width: 150px;
+    height: 20px;
+}
+
+.box-ttt {
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #CCCCCC;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.zidong {
+    width: 300px;
+    height: 25px;
+    text-align: left;
+    text-indent: 68px;
+    margin: 20px 0;
+    span {
+        font-size: 12px;
+        color: #333435;
+    }
+}
+
+.zhu-btn {
+    width: 160px;
+    background: orange;
+    border-width: 1px;
+    border-radius: 8px;
+    height: 29px;
+    margin-left: 60px;
+    &:hover {
+        background: #0086B3;
+        cursor: pointer;
+    }
+}
+
+.zhu-span {
+    font-size: 14px;
+    margin-left: 10px;
+    color: blue;
+}
+
+.zhu-ul {
+    font-size: 14px;
+    width: 260px;
+    height: 20px;
+    margin: 10px auto;
+    list-style: none;
+    text-align: center;
+    li {
+        text-decoration: underline;
+        .fl;
+        margin: 0 4px;
+    }
+}
+
+.box-right {
+    width: 250px;
+    .fr;
+    height: 300px;
+    border-radius: 0px 20px 20px 0px;
+    background: #e1fffd;
+}
+
+.box-contai {
+    width: 250px;
+    margin-top: 50px;
+    height: 200px;
+    &>.box-fei>.btn-a {
+        display: inline-block;
+        width: 130px;
+        height: 50px;
+        background: #8abcc7;
+        line-height: 45px;
+        border: 5px solid white;
+        border-radius: 10px;
+        &:hover {
+            background: red;
+            color: white;
+            cursor: pointer;
+            border: 5px solid deepskyblue;
+        }
+    }
+}
+
+.box-fei {
+    width: 250px;
+    margin-top: 50px;
+    .fl;
+    p {
+        margin-bottom: 10px;
+    }
+}
+.show-btn{
+    width: 600px;
+    height: 300px;
+    border-radius: 20px;
+    .show-img{
+        width: 600px;
+        height:65px;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        span{
+            position: absolute;
+            top: 20px;
+            left: 25%;
+            font-size: 20px;
+            color: white;
+        }
+    }
+    .show-size{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-size: 25px;
+    }
+}
+.show-di{
+    text-align: center;
+    color: orange;
+    span{
+        font-size: 20px;
+    }
+}
+.clear-i{
+    height: 100px;
+    line-height: 60px;
+    text-align: center;
+    a{
+        display: inline-block;
+        .fl;
+        width: 240px;
+        height: 60px;
+        margin: 0 29px;
+        margin-top: 20px;
+        background: #eef3ff;
+        border-radius: 20px;
+        &:hover{
+            cursor: pointer;
+            background: #98aee2;
+            border-radius: 20px;
+            border: 1px solid black;
+        }
+    }
+}
+.logo-box{
+    width: 1190px;
+    margin: 0 auto;
+}
+//电梯
+        .box-xx{
+                position: fixed;
+                right: 40px;
+                bottom: 30px;
+                display: none;
+                width: 35px;
+                height: 94px;
+            }
+            .box-xx a{
+                display: inline-block;
+                width: 35px;
+                height: 32px;
+                position: relative;
+                background: #ffdff8;
+                font-size: 27px;
+                text-align: center;
+            }
+            .box-xx a:nth-child(1){
+                border-radius: 10px 10px 0 0;
+            }
+            .box-xx a:nth-child(3){
+                border-radius: 0 0 10px 10px;
+            }
+            .icon-fanhuishouye,.icon-top,.icon-meishi{
+                font-size: 35px;
+            }
+            .box-xx>a:hover{
+                background: red;
+                cursor: pointer;
+                color: white;
+            }

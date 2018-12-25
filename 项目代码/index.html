@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>奇豆,做懂你的网站</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/star-rating.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_811313_0w56uwguikj.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="shortcut icon" type="text/css" href="img/Thelogin-img/奇豆-logo.gif"/>
+	</head>
+	<body>
+		<!--head开始-->
+		<div class="box">
+			<div class="warp">
+				<ul class="list-left">
+					<li><a href="">Hi，欢迎来到奇豆</a></li>
+					<li><a href="Thelogin.html" style="color: #B08C4A;" id="userName">请登录</a></li>
+					<li><a href="" id="zhuce">免费注册</a></li>							
+				</ul>
+				
+				<ul class="list-right">
+					<li><a href="javascript:(0);">个人中心</a></li>
+					<li class="Record">
+						<a href="javascript:(0);">
+							最近浏览
+						<img class="img1" src="img/index/下标.png"/>
+						</a>
+						<div class="no-Record ">
+							<p>没有浏览记录</p>
+						</div>
+					</li>
+					<li class="n-app">
+						<a href="javascript:(0);">
+						糯米APP
+						<img class="imgs" src="img/index/下标.png"/>
+						</a>
+						<div class="wx">
+							<img class="img2" src="img/index/mmqrcode1537786491726.png"/>
+						</div>
+					</li>
+					<li class="businessman">
+						<a href="javascript:(0);">
+							我是商家
+							<img class="img3" src="img/index/下标.png"/>
+						</a>
+						<div class="businessman-b">
+							<a href="javascript:(0);">商户中心</a>
+							<a href="javascript:(0);">我想合作</a>						
+						</div>
+					</li>
+					<li><a href="javascript:(0);">帮助中心</a></li>
+					<li><a href="javascript:(0);">食品安全</a></li>
+				</ul>	
+			</div>
+		</div>
+		<!--head开始-->
+		<!--搜索框开始-->
+		<div class="fixed-top ">
+			<div class="warp">
+				<div class="logo-img">
+					<a href=""><img class="sove" src="img/Thelogin-img/奇豆.gif"/></a>
+				</div>
+				<div class="Coordinates">
+						<div class="Coordinates_sz">
+							<div class="moves" style="float: left;">
+								<i class="iconfont icon-xiazai20"></i>
+								<span>深圳</span>
+								<img class="img4" src="img/index/下标.png"/>	
+								
+									<div class="city">
+										<h3>热门城市</h3>
+										<hr />
+										<ul>
+											<li><a href="javascript:(0);">北京</a></li>
+											<li><a href="javascript:(0);">上海</a></li>
+											<li><a href="javascript:(0);">广州</a></li>
+											<li><a href="javascript:(0);">深圳</a></li>
+											<li><a href="javascript:(0);">天津</a></li>
+											<li><a href="javascript:(0);">杭州</a></li>
+											<li><a href="javascript:(0);">西安</a></li>
+											<li><a href="javascript:(0);">成都</a></li>
+											<li><a href="javascript:(0);">郑州</a></li>
+											<li><a href="javascript:(0);">厦门</a></li>
+											<li><a href="javascript:(0);">青岛</a></li>
+											<li><a href="javascript:(0);">太原</a></li>
+											<li><a href="javascript:(0);">重庆</a></li>
+											<li><a href="javascript:(0);">武汉</a></li>
+											<li><a href="javascript:(0);">南京</a></li>
+											<li><a href="javascript:(0);">沈阳</a></li>
+											<li><a href="javascript:(0);">济南</a></li>
+											<li><a href="javascript:(0);">哈尔滨</a></li>
+										</ul>
+										<a href="" id="a-right">更多城市></a>
+								</div>
+							</div>
+					<div class="seach">
+						<form action="" method="post">
+							<div class="seach-input">
+								<input @change="fn()" v-model="wd" id="sech" type="text" class="seach-input-s" @keydown.up.prevent="up()" @keydown.down="down()"@blur="bol()" @keyup="fn()" placeholder="搜索商家/地点"/>
+								<input type="button" id="btn" value="搜索" class="seach-input-b" @click="fn()" @contextmenu.prevent="fn3()"/>	
+								<ul class="newlist clearfix">
+									<li v-for="(item,index) in arr" :class="{green:index==noindex}">
+										<a href="http://www.baidu.com">{{item}}</a>
+									</li>
+								</ul>
+							</div>
+						</form>
+						<ul class="seach-list">
+							<li><a href="">按摩</a></li>
+							<li><a href="">艾灸价格</a></li>
+							<li><a href="">华莱士</a></li>
+							<li><a href="">刮痧理疗</a></li>
+							
+						</ul>
+					</div>
+					<div class="right-t">
+						<div class="shop">
+							<a href="">退</a>
+							<p class="no-shop fl">
+								未消费，随便退！
+							</p>
+						</div>
+						<div class="compensate">
+							<a href="">赔</a>
+							<li>|</li>
+							<p class="no-shop2 fl">
+								消费不满意先行赔付！
+							</p>
+						</div>
+						<div class="money">
+							<a href="">￥</a>
+							<li>|</li>
+							<p class="no-shop3 fl">
+								过期自动退
+							</p>
+						</div>	
+							
+					</div>
+					</div>
+			</div>
+		</div>
+	</div>	
+	<!--搜索框结束-->
+	<!--城市开始-->
+	<div id="bande">
+		<div class="warp">
+			<div class="bande-head warp">
+			<ul class="nav-list">
+				<li class="nav-item1">
+					<a href="#">全部分类</a>
+					<i class="iconfont icon-fenlei"></i>
+					<div id="city-li">
+						<ul class="city-ul">
+							<div>
+								<span class="colos">酒店</span>
+								<li class=""><a href="javascript:(0);">深圳/北京/上海</a></li>
+							</div>
+							<div class="tourism">
+									<span class=" colos ">旅游</span>
+									<li class=""><a href="javascript:(0);">目的地攻略/行程计划</a></li>		
+								<p class="tourism-l">
+									<ul class="tourism-list">
+										<li><a href="javascript:(0);">旅游</a></li>
+										
+										<li><a href="javascript:(0);">目的地攻略</a></li>
+										<li><a href="javascript:(0);">行程计划</a></li>
+										<li><a href="javascript:(0);">游记</a></li>
+									</ul>
+								</p>
+							</div>
+							<div class="tourism2">
+									<span class=" colos">电影</span>
+									<li class=""><a href="javascript:(0);">看影片/找影院</a></li>
+									<p class="tourism-2">
+										<ul class="tourism-list2">
+											<h3>热门电影</h3>
+											<li><a href="javascript:(0);">速度与激情</a></li>											
+											<li><a href="javascript:(0);">影</a></li>
+											<li><a href="javascript:(0);">李茶的姑妈</a></li>
+											<li><a href="javascript:(0);">找到你</a></li>
+											<li><a href="javascript:(0);">胖子行动</a></li>											
+											<li><a href="javascript:(0);">悲伤逆流成河</a></li>
+											<li><a href="javascript:(0);">阿凡提之奇缘历险</a></li>
+											<li><a href="javascript:(0);">新灰姑凉</a></li>
+										</ul>
+									</p>
+									
+							</div>
+							<div class="tourism3">
+						
+									<span class=" colos">休闲娱乐</span>
+									<li class="">
+										<a href="">游乐园/水上乐园</a>
+									</li>
+									<p class="tourism-3">
+										<ul class="tourism-list3">
+											<h3>休闲娱乐</h3>
+											<li><a href="javascript:(0);">温泉洗浴</a></li>											
+											<li><a href="javascript:(0);">KTV</a></li>
+											<li><a href="javascript:(0);">足疗</a></li>
+											<li><a href="javascript:(0);">按摩</a></li>
+											<li><a href="javascript:(0);">文化艺术</a></li>											
+											<li><a href="javascript:(0);">采摘</a></li>
+											<li><a href="javascript:(0);">桌游</a></li>
+											<li><a href="javascript:(0);">电玩</a></li>
+											<li><a href="javascript:(0);">DIY手工</a></li>
+											<li><a href="javascript:(0);">密室逃脱</a></li>
+											<li><a href="javascript:(0);">真人cs</a></li>
+											<li><a href="javascript:(0);">卡厅车</a></li>
+										</ul>
+									</p>
+									
+							</div>
+							<div class="tourism4">						
+									<span class=" colos">结婚</span>
+									<li class=""><a href="javascript:(0);">婚纱摄影/婚庆服务</a></li>
+									<p class="tourism-4">
+										<ul class="tourism-list4">
+											<h3>结婚</h3>
+											<li><a href="">婚纱摄影</a></li>											
+											<li><a href="">婚庆服务</a></li>
+											<li><a href="">婚纱礼服</a></li>
+											<li><a href="">个性写真</a></li>
+										</ul>
+									</p>
+							</div>
+							<div>
+								
+									<span class=" colos">生活服务</span>
+									<li class=""><a href="javascript:(0);">配镜/鲜花</a></li>
+								
+								
+							</div>
+							<div>
+								
+									<span class=" colos">美食</span>
+									<li class=""><a href="javascript:(0);">小吃快餐/创意菜/私房菜</a></li>
+							
+								
+							</div>
+							<div >
+								
+									<span class=" colos">丽人</span>
+									<li class=""><a href="javascript:(0);">美发/美容/美甲</a></li>
+
+							</div>
+						</ul>
+					</div>
+				</li>
+				<li class="index"><a href="tourism.html">旅游</a></li>
+				<li class="index"><a href="food.html">美食网</a></li>
+				<li class="index2">
+					<a href="#">出行</a>
+					<img id="imgxia" src="img/index/下标.png"/>
+					<div class="index-x">
+						<a href="Plane-ticket.html">机票</a>
+						<a href="">火车票</a>
+						<a href="">汽车票</a>
+						 
+					</div>
+				</li>
+				<li class="index">
+					<a href="shop.html">购买美食</a>
+					<img src="img/index/hot.png"/>
+				</li>
+				<li class="index"><a href="Plane-ticket.html">机票</a></li>
+				<li class="index"><a href="#">火车票</a></li>
+			</ul>
+		</div>
+		<div id="figure">
+				<div id='myCarousel' class="carousel  slide">
+				<ol class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+					<li data-slide-to="1 data-target="#myCarousel"></li>
+					<li data-slide-to="2" data-target="#myCarousel"></li>				
+				</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<a href="#"><img  src="img/index/banner_21ada6c.jpg"/></a>
+					</div>
+					<div class="item">
+						<a href="#"><img src="img/index/2014050413082490.jpg"/></a>
+					</div>
+					<div class="item">
+						<a href="#"><img  src="img/index/樱花.jpg"/></a>
+					</div>
+				</div>
+			 </div>
+			 <div id="right-i">
+			 	<img class="lzj" src="img/index/lazyload.gif" data-original="img/index/right-banner_562f509 (1).jpg"/>
+			 	<img class="lzj" src="img/index/lazyload.gif" data-original="img/index/right-banner_562f509 (1).jpg"/>			 	
+			 </div>
+		</div>
+	</div>
+		<!--城市结束-->
+	</div>
+	<!--热映电影-->
+		<div id="Hotfilm">
+			<div class="warp h">
+				<h3 style="margin-left: 8px;">热映电影</h3>
+				<div class="Hotfilm-y">
+					<img class="lzj" src="img/index/lazyload.gif" data-original="img/index/s1.jpg"/>
+					<i class="pl">8.4</i>
+					<div class="posi">
+						<p>无双</p>
+						<span>选票购票</span>						
+					</div>
+				</div>
+				
+				<div class="Hotfilm-y">
+					<img class="lzj" src="img/index/lazyload.gif" data-original="img/index/s2.jpg"/>
+					<i class="pl">8.2</i>
+					<div class="posi">
+						<p>影</p>
+						<span>选票购票</span>						
+					</div>
+				</div>
+				
+				<div class="Hotfilm-y">
+					<img class="lzj" src="img/index/lazyload.gif" data-original="img/index/s3.jpg"/>
+					<i class="pl">7.6</i>
+					<div class="posi">
+						<p>李茶的姑妈</p>
+						<span>选票购票</span>						
+					</div>
+				</div>
+				
+				<div class="Hotfilm-y">
+					<img class="lzj" src="img/index/lazyload.gif" data-original="img/index/s4.jpg"/>
+					<i class="pl">7.4</i>
+					<div class="posi">
+						<p>找到你</p>
+						<span>选票购票</span>						
+					</div>
+				</div>
+				<div class="Hotfilm-y">
+					<img class="lzj" src="img/index/lazyload.gif" data-original="img/index/s5.jpg"/>
+					<i class="pl">8.1</i>
+					<div class="posi">
+						<p>胖子行动</p>
+						<span>选票购票</span>						
+					</div>
+				</div>
+				<div class="Hotfilm-y">
+					<img class="lzj" src="img/index/lazyload.gif" data-original="img/index/s6.jpg"/>
+					<i class="pl">8.0</i>
+					<div class="posi">
+						<p>悲伤逆流成河</p>
+						<span>选票购票</span>						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--热映电影结束-->
+		<!--休闲开始-->
+		<div id="leisure">
+			<div class="warp h">
+				<h3>美食优选</h3>
+				<div class="leisure-l">
+					<div class="leisure-img">
+						<img class="lzj" src="img/index/lazyload.gif" data-original="img/purchase/cm2.jpg"/>
+					</div>
+					<div class="">
+						<h4>刺身套餐</h4>
+    					<form>
+						    <label for="input-1" class="control-label" data-size="xs">当前评分</label>
+						    <input id="input-1" name="input-3" value="1" class="rating-loading" data-size="xs" data-show-clear="false" data-min="0">
+						</form> 
+						
+					</div>					
+				</div>
+				
+				<div class="leisure-l">
+					<div class="leisure-img">
+						<img class="lzj" src="img/index/lazyload.gif" data-original="img/purchase/cm3.jpg"/>
+					</div>
+					<div class="">
+						<h4>三文鱼拼盘</h4>
+						<form>
+						    <label for="input-2" class="control-label" data-size="xs">当前评分</label>
+						    <input id="input-2" name="input-3" value="3" class="rating-loading" data-size="xs" data-show-clear="false" data-min="0">
+						</form> 
+					</div>					
+				</div>
+				
+				<div class="leisure-l">
+					<div class="leisure-img">
+						<img class="lzj" src="img/index/lazyload.gif" data-original="img/purchase/cm4.jpg"/>
+					</div>
+					<div class="">
+						<h4>进口大龙虾</h4>
+						<form>
+						    <label for="input-3" class="control-label" data-size="xs">当前评分</label>
+						    <input id="input-3" name="input-3" value="2" class="rating-loading" data-size="xs" data-show-clear="false" data-min="0">
+						</form> 
+					</div>					
+				</div>
+				
+				<div class="leisure-l">
+					<div class="leisure-img">
+						<img class="lzj" src="img/index/lazyload.gif" data-original="img/purchase/cm5.jpg"/>
+					</div>
+					<div class="">
+						<h4>深海基围虾</h4>
+						<form>
+						    <label for="input-4" class="control-label" data-size="xs">当前评分</label>
+						    <input id="input-4" name="input-3" value="3" class="rating-loading" data-size="xs" data-show-clear="false" data-min="0">
+						</form> 
+					</div>					
+				</div>
+				
+				<div class="leisure-l">
+					<div class="leisure-img">
+						<img class="lzj" src="img/index/lazyload.gif" data-original="img/purchase/cm6.jpg"/>
+					</div>
+					<div class="">
+						<h4>三文鱼刺身</h4>
+						    <label for="input-5" class="control-label" data-size="xs">当前评分</label>
+						    <input id="input-5" name="input-3" value="4" class="rating-loading" data-size="xs" data-show-clear="false" data-min="0">
+						
+					</div>					
+				</div>
+			</div>
+		</div>
+		<!--休闲结束-->
+		<!--旅游开始-->
+		<div id="tourisms">
+			<div class="warp h">
+				<div class="tourisms-f">
+					<h3>旅游</h3>
+					<a href="tourism.html">
+						<img class="lzj" src="img/index/lazyload.gif" data-original="img/index/b1.jpg"/>
+						<div class="tourisms-a">
+							<h3>目的地攻略</h3>
+							<h4>Travelling guide</h4>
+						</div>					
+					</a>				
+				</div>
+				<div class="tourisms-f">
+					<h3 style="margin-top: 55px;"></h3>
+					<a href="tourism.html">
+						<img class="lzj" src="img/index/lazyload.gif" data-original="img/index/b2.jpg"/>
+						<div class="tourisms-a">
+							<h3>行程计划</h3>
+							<h4>Travelling plan</h4>
+						</div>					
+					</a>				
+				</div>
+				<div class="tourisms-f">
+					<h3 style="margin-top: 55px;"></h3>
+					<a href="tourism.html">
+						<img class="lzj" src="img/index/lazyload.gif" data-original="img/index/b3.jpg"/>
+						<div class="tourisms-a">
+							<h3>游记</h3>
+							<h4>Travelling notes</h4>
+						</div>					
+					</a>				
+				</div>
+			</div>
+		</div>
+		<!--旅游结束-->
+		<!--结婚开始-->
+		<div id="tourisms">
+			<div class="warp h">
+				<div class="tourisms-f">
+					<h3>结婚</h3>
+					<a href="#">
+						<img class="lzj" src="img/index/lazyload.gif" data-original="img/index/h1.jpg"/>
+						<div class="tourisms-a">
+							<h3>婚纱摄影</h3>
+							<h4>Wedding Photo</h4>
+						</div>					
+					</a>				
+				</div>
+				<div class="tourisms-f">
+					<h3 style="margin-top: 55px;"></h3>
+					<a href="#">
+						<img class="lzj" src="img/index/lazyload.gif" data-original="img/index/h2.jpg"/>
+						<div class="tourisms-a">
+							<h3>婚纱礼服</h3>
+							<h4>Wedding Dress</h4>
+						</div>					
+					</a>				
+				</div>
+				<div class="tourisms-f">
+					<h3 style="margin-top: 55px;"></h3>
+					<a href="#">
+						<img class="lzj tourisms-f-imgso" src="img/index/lazyload.gif" data-original="img/index/h3.jpg"/>
+						<div class="tourisms-g-d">
+							<h3>婚纱礼服</h3>
+							<h4>Wedding Dress</h4>
+						</div>					
+					</a>	
+					<div class="tourisms-g">
+						<a href="">
+							<img class="lzj tourisms-f-imgso" src="img/index/lazyload.gif" data-original="img/index/h4.jpg"/>
+						<div class="tourisms-g-d">
+							<h3>婚纱礼服</h3>
+							<h4>Wedding Dress</h4>
+						</div>	
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--结婚结束-->
+		<!--footer开始-->
+		<div class="footer">
+			<div class="warp ">
+				<h3 class="foot-h3">热门商场</h3>
+				<div class="footer-li r">
+					<ul>
+						<li><a href="">华润万象城</a></li>
+						<li><a href="">茂业百货</a></li>
+						<li><a href="">太阳百货</a></li>
+						<li><a href=""> 皇庭广场</a></li>
+						<li><a href="">南山京基百纳广场</a></li>
+						<li><a href="">保利文化广场</a></li>
+						<li><a href=""> 海岸城</a></li>
+						<li><a href=""> 怡景中心城</a></li>
+						<li><a href="">喜荟城</a></li>
+						<li><a href="">花园城</a></li>
+						<li><a href=""> 天利名城购物中心</a></li>
+						<li><a href=""> 岁宝百货</a></li>						
+					</ul>
+				</div>
+				
+				<div class="footer-buttom">
+					<div class="">
+						<h3>用户帮助</h3>
+						<ul>
+							<li><a href="">常见团购问题</a></li>
+							<li><a href="">开放API</a></li>
+						</ul>
+					</div>
+					<div class="">
+						<h3>手机百度助手</h3>
+						<ul>
+							<li><a href="">百度糯米触屏版</a></li>
+							<li><a href="">下载手机版</a></li>
+						</ul>
+					</div>
+					<div class="">
+						<h3>商务合作</h3>
+						<ul>
+							<li><a href="">友情链接</a></li>
+							<li><a href="">市场合作</a></li>
+
+							
+						</ul>
+					</div>
+					<div class="">
+						<h3>公司信息</h3>
+						<ul>
+							<li><a href="">关于百度糯米</a></li>
+							<li><a href="">百度糯米新浪微博</a></li>
+							<li><a href="">业务投诉</a></li>
+							
+						</ul>
+					</div>
+					<div class="">
+						<h3>400-9216-666</h3>
+						<ul>
+							<li><a href="">周一至周日 9:00-22:00</a></li>
+							<li><a href="">客服电话 免长途费</a></li>
+							<a class="footer-a" href="">手机专享优惠</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--回到顶部style-->
+		<div>
+			<a id="back-to-top" href=""><img src="img/index/回到顶部.png"/>顶部</a>	
+		</div>
+		<!--footer结束-->
+		<script type="text/javascript" src="lib/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="lib/bootstrap.min.js" ></script>
+		<script src="lib/vue.js"></script>
+		<script src="lib/vue-resource.js"></script>
+		<script type="text/javascript" src="lib/jquery.lazyload.min.js" ></script>
+		<script type="text/javascript" src="lib/star-rating.min.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+	</body>
+</html>

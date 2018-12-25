@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>购票页面</title>
+		<!--jquery文件-->
+		<script src="js/jquery-2.1.0.js"></script>
+		<!--日历插件-->
+		<script src="js/My97DatePicker/WdatePicker.js"></script>
+		<!--热门城市搜索jquery插件-->
+		<script type="text/javascript" src="js/cityselect.js"></script>
+		<!--sweiper轮播图JS样式-->
+		<script src="js/swiper.min.js"></script>
+		<!--swiper插件js-->
+		<!--bootstrap的js文件-写轮播图-->
+		<script src="js/bootstrap.min.js"></script>
+		<!--机票懒加载script-->
+		<script src="js/jquery.lazyload.min.js"></script>
+		<!--sweiper轮播图样式-->
+		<link rel="stylesheet" type="text/css" href="js/swiper.min.css" />
+		<!--bootstarp里轮播图的样式-->
+		<link rel="stylesheet" href="js/bootstrap.min.css" />
+		<!--字体图标链接-->
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_812996_9qribdhft6.css" />
+		<!--导入阿里巴巴矢量图标-->
+		<!--热门城市搜索css样式-->
+		<link rel="stylesheet" href="css/cityselect.css">
+		<!--swiper插件样式-->
+		<link rel="stylesheet" type="text/css" href="js/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/Plane-ticket.css" />
+		<link rel="shortcut icon" type="text/css" href="img/p-img/奇豆-logo.gif" />
+		<!--电梯阿里字体图标-->
+		<link rel="stylesheet" type="text/css" href="css/pppppppp.css" />
+		<!--<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_812996_0hm0h2ppy9c7.css"/>-->
+	</head>
+
+	<body>
+		<!--头部logo开始-->
+		<div class="header-logo">
+			<div class="nuomilog fl"></div>
+			<div class="ctriplog fl"></div>
+			<img class="fr" src="img/p-img/dl_banner01.png" />
+		</div>
+		<!--头部logo结束-->
+		<!--机票导航栏开始-->
+		<div class="P-ticket">
+			<ul>
+				<li class="fl">
+					<a href=" javascript:(0)">国内机票</a>
+				</li>
+				<li class="fl">
+					<a href=" javascript:(0)">国际机票</a>
+				</li>
+				<a href=" javascript:(0)" class="fr">登录携程</a>
+			</ul>
+		</div>
+		<!--机票导航栏结束-->
+		<!--查询机票开始-->
+		<div class="ticket-body">
+			<!--购票小窗口导航开始-->
+			<div class="query-ticket fl">
+				<div class="query">
+					<h3><i class="iconfont icon-feiji"></i>国内</h3>
+					<h3><i class="iconfont icon-diqiu"></i>国际.港澳台</h3>
+					<h3 class="icon-d"><i></i><i class="iconfont icon-41"></i>发现低价
+							<span class="iconfont icon-new1 icon-y"></span>
+						</h3>
+				</div>
+				<!--购票小窗口导航结束-->
+				<!--航程类型开始-->
+				<div class="c-type">
+					<ul class="c-type-ul">
+						<li>
+							<span class="hang">航程类型</span>
+							<label for="loss">
+								<input id="loss" type="radio" name="a" value="" />
+								单程  
+							</label>
+							<label for="lozz">
+								<input id="lozz" type="radio" name="a" value="" />
+								往返  
+							</label>
+							<label for="loee">
+								<input id="loee" type="radio" name="a" value="" />
+								多程(含缺口程)
+								<i class="iconfont icon-gantanhao"></i>
+							</label>
+						</li>
+						<li>
+							出发城市 <input class="citySelect" id="citySelect" type="text" placeholder="深圳(szx)" />
+						</li>
+						<li>
+							到达城市 <input class="citySelec" id="citySelec" type="text" placeholder="北京(BJS)" />
+						</li>
+						<li>
+							出发日期 <input class="Wdate" type="text" onclick="WdatePicker({doubleCalendar:true,dateFmt:'yyyy-MM-dd'})" type="text" placeholder="yyyy-mm-dd" />
+						</li>
+						<li>
+							返回日期 <input class="Wdate" type="text" onclick="WdatePicker({doubleCalendar:true,dateFmt:'yyyy-MM-dd'})" type="text" type="text" placeholder="yyyy-mm-dd" />
+						</li>
+						<li>
+							<span class="children"></span>
+							<label for="ertong">
+								<input type="checkbox" id="ertong" class="ertong"/>带儿童				
+							</label>
+							<label for="yiner">
+								<input type="checkbox" id="yiner" class="ertong"/>带婴儿
+							</label>
+							<a href=" javascript:(0)">儿童/婴儿票</a><i class="iconfont icon-gantanhao"></i>
+						</li>
+						<a href=" javascript:(0)" class="senior">高级搜索<i class="iconfont icon-xia1"></i></a>
+					</ul>
+				</div>
+				<!--航程类型结束-->
+				<!--航程图搜索按钮开始-->
+				<div class="senior-btn">
+					<a href="Plane-search.html" class="s-btn">高级跳转</a>
+				</div>
+				<!--航程图搜索按钮结束-->
+			</div>
+
+			<!--右侧轮播图及下面开始-->
+			<div class="index-main fr">
+				<!--中间轮播图开始-->
+				<div id='myCarousel' class="carousel  slide">
+					<ol class="carousel-indicators">
+						<li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+						<li data-slide-to="1" data-target="#myCarousel"></li>
+						<li data-slide-to="2" data-target="#myCarousel"></li>
+						<li data-slide-to="3" data-target="#myCarousel"></li>
+						<li data-slide-to="4" data-target="#myCarousel"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active">
+							<a href="#"><img src="img/p-img/e6c87b07592d03c3cfa0af8b69790e2.png" /></a>
+						</div>
+						<div class="item">
+							<a href="#"><img src="img/p-img/bf98c1040c8cf4f14d284f36cdd6b1f.png" /></a>
+						</div>
+						<div class="item">
+							<a href="#"><img src="img/p-img/333873208080808298.png" /></a>
+						</div>
+						<div class="item">
+							<a href="#"><img src="img/p-img/276463969292118152.jpg" /></a>
+						</div>
+						<div class="item">
+							<a href="#"><img src="img/p-img/fa9bfb31b377dd3bc5fa434044384b2.png" /></a>
+						</div>
+					</div>
+					<div class="">
+						<a href="#myCarousel" data-slide="prev" class="carousel-control left"></a>
+						<a href="#myCarousel" data-slide="next" class="carousel-control right"></a>
+					</div>
+				</div>
+				<!--轮播图结束-->
+
+				<!--/*航空公司特惠专区开始*/-->
+				<div class="Preferential">
+					<h3>航空公司特惠专区</h3>
+					<hr />
+					<div class="swiper-container p-map">
+						<div class="swiper-wrapper p-map-md">
+							<!--<div class="swiper-slide"></div>
+				<div class="swiper-slide"></div>
+				<div class="swiper-slide"></div>-->
+							<dl class="swiper-slide">
+								<dt><a href="javascript:video()"><strong>南方航空</strong>>></a></dt>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-05</span>
+										<span class="p-map-md-span">深圳-海口</span>
+										<span>￥300</span>
+									</a>
+								</dd>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-06</span>
+										<span class="p-map-md-span">深圳-海口</span>
+										<span>￥360</span>
+									</a>
+								</dd>
+							</dl>
+							<dl class="swiper-slide">
+								<dt><a href=" javascript:(0)"><strong>首都航空</strong>>></a></dt>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-22</span>
+										<span class="p-map-md-span">深圳-南宁</span>
+										<span>￥390</span>
+									</a>
+								</dd>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-18  </span>
+										<span class="p-map-md-span">深圳-榆林</span>
+										<span>￥300</span>
+									</a>
+								</dd>
+							</dl>
+							<dl class="swiper-slide">
+								<dt><a href=" javascript:(0)"><strong>南方航空</strong>>></a></dt>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-10</span>
+										<span class="p-map-md-span">深圳-南昌</span>
+										<span>￥390</span>
+									</a>
+								</dd>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-08</span>
+										<span class="p-map-md-span">深圳-上海 </span>
+										<span>￥608</span>
+									</a>
+								</dd>
+							</dl>
+							<dl class="swiper-slide">
+								<dt><a href=" javascript:(0)"><strong>中国航空</strong>>></a></dt>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-17</span>
+										<span class="p-map-md-span">深圳-贵阳</span>
+										<span>￥360</span>
+									</a>
+								</dd>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-08</span>
+										<span class="p-map-md-span">深圳-南宁</span>
+										<span>￥290</span>
+									</a>
+								</dd>
+							</dl>
+							<dl class="swiper-slide">
+								<dt><a href=" javascript:(0)"><strong>青岛航空</strong>>></a></dt>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-10</span>
+										<span class="p-map-md-span">深圳-厦门</span>
+										<span>￥325</span>
+									</a>
+								</dd>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-08</span>
+										<span class="p-map-md-span">深圳-上海  </span>
+										<span>￥608</span>
+									</a>
+								</dd>
+							</dl>
+							<dl class="swiper-slide">
+								<dt><a href=" javascript:(0)"><strong>祥鹏航空</strong>>></a></dt>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-10</span>
+										<span class="p-map-md-span">深圳-重庆</span>
+										<span>￥430</span>
+									</a>
+								</dd>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-08</span>
+										<span class="p-map-md-span">深圳-合肥  </span>
+										<span>￥430</span>
+									</a>
+								</dd>
+							</dl>
+							<dl class="swiper-slide">
+								<dt><a href=" javascript:(0)"><strong>山东航空</strong>>></a></dt>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-10</span>
+										<span class="p-map-md-span">深圳-成都</span>
+										<span>￥650</span>
+									</a>
+								</dd>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-08</span>
+										<span class="p-map-md-span">深圳-成都  </span>
+										<span>￥340</span>
+									</a>
+								</dd>
+							</dl>
+							<dl class="swiper-slide">
+								<dt><a href=" javascript:(0)"><strong>昆明航空</strong>>></a></dt>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-10</span>
+										<span class="p-map-md-span">深圳-成都</span>
+										<span>￥290</span>
+									</a>
+								</dd>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-08</span>
+										<span class="p-map-md-span">深圳-成都  </span>
+										<span>￥340</span>
+									</a>
+								</dd>
+							</dl>
+							<dl class="swiper-slide">
+								<dt><a href=" javascript:(0)"><strong>春秋航空</strong>>></a></dt>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-10</span>
+										<span class="p-map-md-span">宝安-长沙</span>
+										<span>￥290</span>
+									</a>
+								</dd>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-08</span>
+										<span class="p-map-md-span">深圳-成都  </span>
+										<span>￥340</span>
+									</a>
+								</dd>
+							</dl>
+							<dl class="swiper-slide">
+								<dt><a href=" javascript:(0)"><strong>东海航空</strong>>></a></dt>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-10</span>
+										<span class="p-map-md-span">深圳-江苏</span>
+										<span>￥290</span>
+									</a>
+								</dd>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-08</span>
+										<span class="p-map-md-span">深圳-江苏  </span>
+										<span>￥340</span>
+									</a>
+								</dd>
+							</dl>
+							<dl class="swiper-slide">
+								<dt><a href=" javascript:(0)"><strong>厦门航空</strong>>></a></dt>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-10</span>
+										<span class="p-map-md-span">深圳-江苏</span>
+										<span>￥290</span>
+									</a>
+								</dd>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-08</span>
+										<span class="p-map-md-span">深圳-杭州  </span>
+										<span>￥340</span>
+									</a>
+								</dd>
+							</dl>
+							<dl class="swiper-slide">
+								<dt><a href=" javascript:(0)"><strong>九元航空</strong>>></a></dt>
+								<dd>
+									<a href=" javascript:(0)">
+										<span>10-10</span>
+										<span class="p-map-md-span">深圳-江西</span>
+										<span>￥290</span>
+									</a>
+								</dd>
+								<dd>
+									<a href="javascript:(0)">
+										<span>10-08</span>
+										<span class="p-map-md-span">深圳-武汉  </span>
+										<span>￥340</span>
+									</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<!--航空公司特惠专区结束-->
+				<!--猜你喜欢开始-->
+				<div class="jp-tebel-index">
+					<div class="jp-tebel-love">
+						<a href=" javascript:(0)">猜你喜欢</a>
+						<a href=" javascript:(0)">低价日历</a>
+						<hr />
+					</div>
+					<div class="jp-tebel">
+						<a href=" javascript:(0)" class="">
+							<div class="imghei">
+								<img src="img/p-img/bjs.jpg" />
+							</div>
+							<div class="item-con">
+								<i>抢低价</i><br />
+								<h2>北京→上海</h2>
+								<span>10月3号</span><br />
+								<span>2.9折</span>
+								<span>￥400</span>
+							</div>
+						</a>
+						<a href=" javascript:(0)" class="">
+							<div class="imghei">
+								<img src="img/p-img/can.jpg" />
+							</div>
+							<div class="item-con">
+								<i>抢低价</i><br />
+								<h2>上海→深圳</h2>
+								<span>10月10号</span><br />
+								<span>3.4折</span>
+								<span>￥340</span>
+							</div>
+						</a>
+						<a href=" javascript:(0)" class="">
+							<div class="imghei">
+								<img src="img/p-img/ctu.jpg" />
+							</div>
+							<div class="item-con">
+								<i>抢低价</i><br />
+								<h2>上海→成都</h2>
+								<span>10月4号</span><br />
+								<span>2.0折</span>
+								<span>￥500</span>
+							</div>
+						</a>
+						<a href=" javascript:(0)" class="">
+							<div class="imghei">
+								<img src="img/p-img/szx.jpg" />
+							</div>
+							<div class="item-con">
+								<i>抢低价</i><br />
+								<h2>上海→广州</h2>
+								<span>10月5号</span><br />
+								<span>3.4折</span>
+								<span>￥600</span>
+							</div>
+						</a>
+					</div>
+					<div class="lo-robbing">
+						<a href=" javascript:(0)" class="fl">
+							<div class="item-con">
+								<i>抢低价</i><br />
+								<h2>上海→厦门</h2>
+								<span>10月5号</span><br />
+								<span>3.4折</span>
+								<span>￥350</span>
+							</div>
+						</a>
+						<a href=" javascript:(0)" class="fl">
+							<div class="item-con">
+								<i>抢低价</i><br />
+								<h2>上海→青岛</h2>
+								<span>10月5号</span><br />
+								<span>3.4折</span>
+								<span>￥180</span>
+							</div>
+						</a>
+						<a href=" javascript:(0)" class="fl">
+							<div class="item-con">
+								<i>抢低价</i><br />
+								<h2>上海→重庆</h2>
+								<span>10月5号</span><br />
+								<span>3.4折</span>
+								<span>￥590</span>
+							</div>
+						</a>
+						<a href=" javascript:(0)" class="fl">
+							<div class="item-con">
+								<i>抢低价</i><br />
+								<h2>上海→大连</h2>
+								<span>10月5号</span><br />
+								<span>3.4折</span>
+								<span>￥300</span>
+							</div>
+						</a>
+					</div>
+					<div class="lo-robbing-box">
+						<div class="lo-robbing">
+							<a href=" javascript:(0)" class="fl">
+								<div class="item-con">
+									<i>抢低价</i><br />
+									<h2>上海→天津</h2>
+									<span>10月5号</span><br />
+									<span>3.4折</span>
+									<span>￥320</span>
+								</div>
+							</a>
+							<a href=" javascript:(0)" class="fl">
+								<div class="item-con">
+									<i>人气</i><br />
+									<h2>上海→沈阳</h2>
+									<span>10月5号</span><br />
+									<span>3.4折</span>
+									<span>￥390</span>
+								</div>
+							</a>
+							<a href=" javascript:(0)" class="fl">
+								<div class="item-con">
+									<i>超值</i><br />
+									<h2>上海→沈阳</h2>
+									<span>10月5号</span><br />
+									<span>3.4折</span>
+									<span>￥390</span>
+								</div>
+							</a>
+							<a href=" javascript:(0)" class="fl">
+								<div class="item-con">
+									<i>特价</i><br />
+									<h2>上海→深圳</h2>
+									<span>10月5号</span><br />
+									<span>3.4折</span>
+									<span>￥160</span>
+								</div>
+							</a>
+						</div>
+						<span class="jp-tebel-btn">点击加载更多</span>
+						<img class="imgsz" src="img/p-img/jiong.gif" />
+						<div class="jp-tebel-bo">
+							<div class="lo-robbing lazy">
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>抢低价</i><br />
+										<h2>上海→广州</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥647</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>人气</i><br />
+										<h2>上海→重庆</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥608</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>超值</i><br />
+										<h2>上海→青岛</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥320</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>特价</i><br />
+										<h2>上海→广州</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥710</span>
+									</div>
+								</a>
+							</div>
+							<div class="lo-robbing lazy">
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>抢低价</i><br />
+										<h2>上海→深圳</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥608</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>人气</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥388</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>超值</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥325</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>特价</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥407</span>
+									</div>
+								</a>
+							</div>
+							<div class="lo-robbing lazy">
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>抢低价</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥365</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>人气</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥388</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>超值</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥312</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>特价</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥404</span>
+									</div>
+								</a>
+							</div>
+							<div class="lo-robbing lazy">
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>抢低价</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥378</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>人气</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥388</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>超值</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥317</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>特价</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥401</span>
+									</div>
+								</a>
+							</div>
+							<div class="lo-robbing lazy">
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>抢低价</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥356</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>人气</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥388</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>超值</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥316</span>
+									</div>
+								</a>
+								<a href=" javascript:(0)" class="fl">
+									<div class="item-con">
+										<i>特价</i><br />
+										<h2>上海→北京</h2>
+										<span>10月5号</span><br />
+										<span>3.4折</span>
+										<span>￥405</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!--<img class="lazy" data-original="img/1.jpg" src="img/lazyload.gif" alt="" /><br/>-->
+					</div>
+				</div>
+				<!--猜你喜欢结束-->
+				<!--右侧第二个轮播图开始-->
+				<div class="box-ji">
+					<div class="recommend">
+						<div>
+							<a href=" javascript:(0)" class="recommend-a">
+								<img src="img/p-img/600v0m000000e98vpC399.jpg" />
+								<div class="ss">
+									<div class="recommend-str">
+										<strong class="fr">机票破底价</strong><br />
+										<strong class="fr">比高铁更便宜</strong>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div>
+							<a href=" javascript:(0)" class="recommend-a">
+								<img src="img/p-img/600l0v000000k1qd38887.jpg" />
+								<div class="ss">
+									<div class="recommend-str">
+										<strong class="fr">奥凯航空</strong><br />
+										<strong class="fr">"智"选高端经济舱</strong>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div>
+							<a href=" javascript:(0)" class="recommend-a">
+								<img src="img/p-img/600v0m000000e98vpC399.jpg" />
+								<div class="ss">
+									<div class="recommend-str">
+										<strong class="fr">奥凯航空</strong><br />
+										<strong class="fr">机票2折起</strong>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div>
+							<a href=" javascript:(0)" class="recommend-a">
+								<img src="img/p-img/600l0v000000k1qd38887.jpg" />
+								<div class="ss">
+									<div class="recommend-str">
+										<strong class="fr">机票破底价</strong><br />
+										<strong class="fr">比高铁更便宜</strong>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div>
+							<a href=" javascript:(0)" class="recommend-a">
+								<img src="img/p-img/600l0v000000k1qd38887.jpg" />
+								<div class="ss">
+									<div class="recommend-str">
+										<strong class="fr">海南航空</strong><br />
+										<strong class="fr">"智"选高端经济舱</strong>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div>
+							<a href=" javascript:(0)" class="recommend-a">
+								<img src="img/p-img/600v0m000000e98vpC399.jpg" />
+								<div class="ss">
+									<div class="recommend-str">
+										<strong class="fr">奥凯航空</strong><br />
+										<strong class="fr">机票2折起</strong>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!--右侧第二个轮播图结束-->
+			</div>
+			<!--右侧轮播图及下面结束-->
+			<!--诈骗小广告开始-->
+			<div class="s-swindle">
+				<img src="img/p-img/banner-201615.png" />
+				<a href=" javascript:(0)">
+					<i class="iconfont icon-you fr"></i>
+					<i class="iconfont icon-tansuob fl"></i>
+					<strong class="fl">抄底机票特价</strong>
+					<p class="sxfont">由携程为您筛选</p>
+				</a>
+			</div>
+			<!--诈骗小广告结束-->
+			<!--机票工具箱开始-->
+			<h3 class="p-tool">
+				机票工具箱
+			</h3>
+			<!--机票工具箱结束-->
+
+			<!--退票模块开始-->
+			<div class="To-ticket">
+				<a href=" javascript:(0)"><i class="iconfont icon-icon-test"></i><br />低价早知道</a>
+				<a href=" javascript:(0)"><i class="iconfont icon-typecar124"></i><br />网上选座位</a>
+				<a href=" javascript:(0)"><i class="iconfont icon-yingyuanxinxituipiao"></i><br />退票改签</a>
+				<a href=" javascript:(0)"><i class="iconfont icon-feiji800"></i><br />航班时刻表</a>
+			</div>
+			<!--退票模块结束-->
+			<!--动态查询开始-->
+			<div class="D-query">
+				<h4 class="f-query">航班动态查询</h4>
+				<div class="C-inquiries">
+					<input type="radio" name="hao" id="banhao" />
+					<label for="banhao">按航班号查询</label>
+					<input type="radio" name="hao" id="qijiang" />
+					<label for="qijiang">按起降城市查询</label>
+				</div>
+				<div class="input-query">
+					<input type="text" />
+					<input type="button" value="查询" />
+				</div>
+			</div>
+			<!--动态查询结束-->
+
+			<!--为什么选携程开始-->
+			<div class="why-xc">
+				<h3>为什么选携程</h3>
+				<img src="img/p-img/choose_index.png" />
+			</div>
+			<img class="img-2" src="img/p-img/commitment.png" />
+			<!--为什么选携程结束-->
+
+			<!--服务广告开始-->
+			<div class="r-advertising">
+				<h3>服务广告</h3>
+				<ul>
+					<li>
+						<a href=" javascript:(0)">关于禁止携带危险品乘机的通知</a>
+					</li>
+					<li>
+						<a href=" javascript:(0)">关于欺诈短信电话的提醒</a>
+					</li>
+					<li>
+						<a href=" javascript:(0)">海航关于禁止小型锂电池平衡车作为手提行李及托运行李运输提示</a>
+					</li>
+					<li>
+						<a href=" javascript:(0)">国内机票预订须知</a>
+					</li>
+				</ul>
+				<span style="font-size: 10px;padding-left: 5px;"><a href=" javascript:(0)">更多公告>></a></span>
+			</div>
+			<!--服务广告结束-->
+
+			<!--热门航线，机票工具箱，打折机票~~~开始-->
+			<div class="seo-footer">
+				<h3>携程旅行网提供机票预订，飞机票查询时刻表。票价查询以及特价机票，便宜机票，打折机票查询预订服务</h3>
+				<strong class="str1">热门航线</strong>
+				<div class="footer-box1">
+					<a href=" javascript:(0)">济南到广州机票</a>
+					<a href=" javascript:(0)">广州到福州机票</a>
+					<a href=" javascript:(0)">温州到广州机票</a>
+					<a href=" javascript:(0)">上海到长沙机票</a>
+					<a href=" javascript:(0)">三亚到北京机票</a>
+					<a href=" javascript:(0)">合肥到北京机票</a>
+					<a href=" javascript:(0)">北京到广州机票</a>
+					<a href=" javascript:(0)">北京到乌鲁木齐机票</a>
+					<a href=" javascript:(0)">重庆到上海机票</a>
+					<a href=" javascript:(0)">成都到深圳机票</a>
+					<a href=" javascript:(0)">西安到广州机票</a><br />
+					<a href=" javascript:(0)">北京到福州机票</a>
+					<a href=" javascript:(0)">杭州到北京机票</a>
+					<a href=" javascript:(0)">深圳到重庆机票</a>
+					<a href=" javascript:(0)">广州到青岛机票</a>
+					<a href=" javascript:(0)">成都到武汉机票</a>
+					<a href=" javascript:(0)">上海到烟台机票</a>
+					<a href=" javascript:(0)">福州到广州机票</a>
+					<a href=" javascript:(0)">武汉到广州机票</a>
+					<a href=" javascript:(0)">长沙到上海机票</a>
+				</div>
+				<strong class="str2">机票工具箱</strong>
+				<div class="footer-box2">
+					<a href=" javascript:(0)">航班时刻表查询</a>
+					<a href=" javascript:(0)">航班动态查询</a>
+					<a href=" javascript:(0)">机场查询</a>
+					<a href=" javascript:(0)">机票排行榜</a>
+					<a href=" javascript:(0)">机票地图</a>
+					<a href=" javascript:(0)">机票手机版</a>
+					<a href=" javascript:(0)">天海邮轮</a>
+					<a href=" javascript:(0)">值机</a>
+				</div>
+				<br />
+					<strong class="str3">打折机票</strong>
+					<div class="footer-box3">
+						<a href=" javascript:(0)">上海特价机票</a>
+						<a href=" javascript:(0)">北京特价机票</a>
+						<a href=" javascript:(0)">广州特价机票</a>
+						<a href=" javascript:(0)">深圳特价机票</a>
+						<a href=" javascript:(0)">重庆特价机票</a>
+						<a href=" javascript:(0)">成都特价机票</a>
+						<a href=" javascript:(0)">昆明特价机票</a>
+						<a href=" javascript:(0)">厦门特价机票</a>
+						<a href=" javascript:(0)">三亚特价机票</a>
+						<a href=" javascript:(0)">六连特价机票</a>
+						<a href=" javascript:(0)">丽江特价机票</a>
+						<a href=" javascript:(0)">天津特价机票</a>
+						<a class="fuzhou" href=" javascript:(0)">福州特价机票</a>
+						<a href=" javascript:(0)">沈阳特价机票</a>
+						<a href=" javascript:(0)">郑州特价机票</a>
+						<a href=" javascript:(0)">青岛特价机票</a>
+						<a href=" javascript:(0)">西安特价机票</a>
+						<a href=" javascript:(0)">南京特价机票</a>
+						<a href=" javascript:(0)">武汉特价机票</a>
+						<a href=" javascript:(0)">杭州特价机票</a>
+						<a href=" javascript:(0)">更多特价机票</a>
+					</div>
+					<strong class="str4">航空机票</strong>
+				<div class="footer-box4">
+					<a href=" javascript:(0)">春秋航空</a>
+					<a href=" javascript:(0)">东方航空</a>
+					<a href=" javascript:(0)">南方航空</a>
+					<a href=" javascript:(0)">中国航空</a>
+					<a href=" javascript:(0)">海南航空</a>
+					<a href=" javascript:(0)">深圳航空</a>
+					<a href=" javascript:(0)">厦门航空</a>
+					<a href=" javascript:(0)">山东航空</a>
+					<a href=" javascript:(0)">吉祥航空</a>
+					<a href=" javascript:(0)">首都航空</a>
+					<a href=" javascript:(0)">四川航空</a>
+					<a href=" javascript:(0)">幸福航空</a>
+					<a href=" javascript:(0)">祥鹏航空</a>
+					<a href=" javascript:(0)">上海航空</a>
+					<strong>最新预定</strong>
+				</div>
+			</div>
+			<!--热门航线，机票工具箱，打折机票~~~结束-->
+		</div>
+		<!--页脚开始-->
+		<div class="footerl">
+			<p>
+				<a href=" javascript:(0)">网站导航</a>|
+				<a href=" javascript:(0)">宾馆索引</a>|
+				<a href=" javascript:(0)">机票索引</a>|
+				<a href=" javascript:(0)">旅游索引</a>|
+				<a href=" javascript:(0)">商旅索引</a>|
+				<a href=" javascript:(0)">攻略索引</a>|
+				<a href=" javascript:(0)">关于携程</a>|
+				<a href=" javascript:(0)">企业公民</a>|
+				<a href=" javascript:(0)">诚聘英才</a>|
+				<a href=" javascript:(0)">智慧旅游</a>|
+				<a href=" javascript:(0)">分销联盟</a>|
+				<a href=" javascript:(0)">代理合作</a>|
+				<a href=" javascript:(0)">企业商旅</a>|
+				<a href=" javascript:(0)">中小企业差旅</a>|
+				<a href=" javascript:(0)">广告业务</a>|
+				<a href=" javascript:(0)">联系我们</a>
+			</p>
+			<p>
+				<a href=" javascript:(0)">酒店加盟</a>|
+				<a href=" javascript:(0)">旅游局及景区合作</a>|
+				<a href=" javascript:(0)">服务说明</a>|
+				<a href=" javascript:(0)">营业执照</a>|
+				<a href=" javascript:(0)">旅游度假资质</a>|
+				<a href=" javascript:(0)">保险理赔</a>|
+				<a href=" javascript:(0)">友情链接</a>|
+				<a href=" javascript:(0)">Copyright?</a>1999-2016
+				<a href=" javascript:(0)">ctrip.com.</a>All rights reserved. |
+				<a href=" javascript:(0)">ICP证：沪B2-20050130</a>
+			</p>
+			<p>
+				<a href=" javascript:(0)"><i class="icon"></i> 沪公网备31010502000018号</a>
+			</p>
+			<div class="footerl-j">
+				<a href=" javascript:(0)"><i class="img-icon1"></i>信用评级</a>
+				<a href=" javascript:(0)"><i class="img-icon2"></i>上海工商</a>
+				<a href=" javascript:(0)" class="img-icon3"></a>
+				<a href=" javascript:(0)"><i class="img-icon4"></i>网络社会</a>
+				<a href=" javascript:(0)" class="img-icon5"></a>
+				<a href=" javascript:(0)" class="img-icon6"></a>
+				<a href=" javascript:(0)" class="img-icon7"></a>
+			</div>
+			<!--页脚结束-->
+		</div>
+		<!--页脚结束-->
+				<!--电梯-->
+		<div class="con-box-pp">
+			<div class="box-xx">
+								<a class="iconfont vv icon-top" title="回顶部"></a>
+				<a href="index.html" class="iconfont vv icon-fanhuishouye" title="回首页"></a>
+				<a href="food.html" class="iconfont vv icon-meishi" title="去美食"></a>
+			</div>
+		</div>
+		<!--查询机票结束-->
+		<script>
+			//			电梯
+			var loss=document.getElementsByClassName("box-xx")[0]
+			var fanhuishouye=document.getElementsByClassName("icon-top")[0]
+			window.onscroll=function(){
+				var scroll=document.documentElement.scrollTop||document.body.scrollTop
+				if(scroll>100){
+					loss.style.display="block"
+				}else{
+					loss.style.display="none"
+				}
+				console.log(scroll)
+			}
+			fanhuishouye.onclick=function(){
+				var time;
+				time=setInterval(function(){
+					var scroll=document.documentElement.scrollTop||document.body.scrollTop
+					document.body.scrollTop-=100
+					document.documentElement.scrollTop-=100
+					if(scroll==0){
+						clearInterval(time)
+					}
+				},20)
+			}
+			//热门城市插件
+			var test = new Vcity.CitySelector({
+				input: 'citySelect'
+			});
+			var test = new Vcity.CitySelector({
+				input: 'citySelec'
+			});
+
+			//中间大风景轮播图jquery 
+			$("#myCarousel").carousel({
+				interval: 1500,
+				pause: "hover",
+				wrap: true,
+			})
+			//sweiper插件
+			var mySwiper = new Swiper('.swiper-container', {
+				direction: "horizontal",
+				slidesPerView: 3,
+				spaceBetween: 30,
+				lazy: false,
+				autoplay: 1000, //可选选项，自动滑动
+				autoplayDisableOnInteraction: false, //滑动完毕之后继续autoplay
+				loop: true, //无缝循环 
+			})
+			$(".swiper-container").hover(function() {
+				mySwiper.stopAutoplay()
+			}, function() {
+				mySwiper.startAutoplay()
+			})
+			//首页懒加载jquery
+			$(".jp-tebel-btn").on("click", function() {
+				$(".r-advertising").css("margin-bottom", "10%")
+				$(".jp-tebel-btn").css("display", "none")
+				$(".index-main").css("position", "relative")
+				$(".r-advertising").css("padding-top", "2%")
+				$(".box-ji").css({
+					"position": "absolute",
+					"bottom": "-15%"
+				})
+				$(".imgsz").css("display", "block")
+				$(".imgsz").css("display", "block")
+				setTimeout(function() {
+					$(".jp-tebel-bo").css("display", "block")
+					$(".imgsz").css("display", "none")
+				}, 2000)
+
+				$(".lazy").lazyload({
+					effect: "fadeIn", //"slideDown"
+					//event:"click",
+					threshold: -100
+				});
+			})
+			$(".jp-tebel>a").hover(function() {
+				$(this).css("overflow", "hidden")
+				$(this).find("img").css("transform", "scale(1.5)")
+
+			}, function() {
+				$(this).find("img").css("transform", "scale(1)")
+			})
+		</script>
+	</body>
+
+</html>

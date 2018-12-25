@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--阿里巴巴矢量图-->
+		<link rel="stylesheet" href="img/fFont/iconfont.css" />
+		<!--购买页面样式-->
+		<link rel="stylesheet" href="css/purchase.css" />
+		<!--轮播图样式-->
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<!--放大镜样式-->
+		<link rel="stylesheet" href="css/magnifier.css" />
+		<!--模态框样式-->
+		<link rel="stylesheet" href="css/zeroModal.css" />
+		
+
+		<title>奇豆食品购买</title>
+	</head>
+		<!--https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.36.708d39c6JyVCXN&id=544946718651&user_id=3025696288&cat_id=2&is_b=1&rn=441ac5e39b737a01dd18e022468d275b-->
+	<body>
+		<div id="mask" class="mask"></div>
+		<!--头部固定栏-->
+		<header>
+			<div class="f_head">
+				<!--头部固定栏-->
+				<ul class="hd_menu">
+					<li>
+						<a title="奇豆" href="index.html"   class=""><i><strong>奇豆</strong></i>首页</a>
+					</li>
+					<li>
+						<a title="搜索" href="food.html"  >美食</a>
+					</li>
+					<li>
+						<a title="食材" href="shop.html"  >食材</a>
+					</li>
+					<li>
+						<a title="珍选" href="purchase.html"  >珍选</a>
+					</li>
+					<li>
+						<a title="旅游" href="tourism.html"  >旅游</a>
+					</li>
+					<li>
+						<a title="购票" href=""  >购票</a>
+					</li>
+					<li>
+						<a title="社区" href=""  >社区</a>
+					</li>
+					<li>
+						<a title="菜谱" href=""  >菜谱</a>
+					</li>
+					<li>
+						<a title="话题" href=""  >话题</a>
+					</li>
+					<li>
+						<a title="活动" href=""  >活动</a>
+					</li>
+					<li>
+						<i class="iconfont icon-xialaanniu"></i>
+						<!--头部固定栏下拉框-->
+						<div class="hd_dropdown">
+							<a title="烘焙" href=""  >烘焙</a>
+							<a title="妈妈派" href=""  >妈妈派</a>
+						</div>
+					</li>
+				</ul>
+				<!--头部固定栏用户注册登录-->
+				<div class="hd_login right">
+					<a title="" href="" id="zhuce" >注册</a>
+					<a title="" href="Thelogin.html" id="userName" >登录</a>
+					<a class="lgn_Q" title="" href=""  ><i class="iconfont icon-qq"></i><br />QQ登录</a>
+				</div>
+			</div>
+		</header>
+		<!--头部导航-->
+		<div class="f_nav wrap2">
+			<div class="left nav_pic">
+				<ul>
+					<li>
+						<img style="width: 128px;" src="img/logo.png" />
+					</li>
+					<li>
+						<h4><strong>深水游旗舰店</strong></h4>
+						<span><strong>品牌直销</strong></span>
+						<i class="iconfont icon-aliwangwang"></i>
+					</li>
+					<li>
+						<p>描&nbsp;述&nbsp;物&nbsp;流&nbsp;服&nbsp;务&nbsp;评分</p>
+						<span>4.8&nbsp;<strong>—</strong>&nbsp;4.8&nbsp;<strong><i class="iconfont icon-arrow-top"></i></strong>&nbsp;4.8&nbsp;<strong><i class="iconfont icon-arrow-top"></i></strong>&nbsp;</span>
+					</li>
+					<li>
+						<p>手机逛</p>
+						<span><i class="iconfont icon-erweima"></i></span>
+					</li>
+				</ul>
+			</div>
+			<div id="box" class="nav_search">
+				<input @keydown.down="down()" @keydown.up.prevent="up()" v-model="msg" @keyup="clickMe($event)" type="text" placeholder="请输入...."/>
+				<p class="sch_btn" @click="clickMe()">搜索</p>
+				<div class="clearfix"></div>
+				<ul id="list" :class="{bor:flag}">
+					<li @mouseenter="inS(index)" @mouseout="out()" v-for="(item,index) in arr":class={active:searchIndex==index,newHr:current==index}>
+						<a :href="'https://www.baidu.com/s?wd='+item">{{item}}</a>
+					</li>
+				</ul>
+				<ul class="sch_ul">
+					<li><a href="">三文鱼刺身</a></li>
+					<li><a href="">生鱼片</a></li>
+					<li><a href="">烟熏三文鱼</a></li>
+					<li><a href="">三文鱼头</a></li>
+					<li><a href="">三文鱼腩</a></li>
+					<li><a href="">冰鲜三文鱼</a></li>
+					<li><a href="">三文鱼片</a></li>
+				</ul>
+			</div>
+			<!--<div class="nav_search">
+				<input type="text" />
+				<div class="sch_btn">搜索</div>
+				<ul class="sch_ul">
+					<li><a href="">三文鱼刺身</a></li>
+					<li><a href="">生鱼片</a></li>
+					<li><a href="">烟熏三文鱼</a></li>
+					<li><a href="">三文鱼头</a></li>
+					<li><a href="">三文鱼腩</a></li>
+					<li><a href="">冰鲜三文鱼</a></li>
+					<li><a href="">三文鱼片</a></li>
+				</ul>
+			</div>-->
+		</div>
+		<!--店铺门牌-->
+		<div class="f_doorplate wrap">
+			<img src="img/purchase/nav1.jpg" />
+		</div>
+		<!--商品内容-->
+		<div class="f_content wrap clearfix">
+			<!--淘宝放大镜-->
+			<div class="cet_left left">
+				<div class="magnifier" id="magnifier1">
+					<div class="magnifier-container">
+						<div class="images-cover"></div>
+						<!--当前图片显示容器-->
+						<div class="move-view"></div>
+						<!--跟随鼠标移动的盒子-->
+					</div>
+					<div class="magnifier-assembly">
+						<div class="magnifier-btn">
+							<span class="magnifier-btn-left">&lt;</span>
+							<span class="magnifier-btn-right">&gt;</span>
+						</div>
+						<!--按钮组-->
+						<div class="magnifier-line">
+							<ul class="clearfix animation03">
+								<li>
+									<div class="small-img">
+										<img src="img/purchase/fd1.jpg" />
+									</div>
+								</li>
+								<li>
+									<div class="small-img">
+										<img src="img/purchase/fd2.jpg" />
+									</div>
+								</li>
+								<li>
+									<div class="small-img">
+										<img src="img/purchase/fd3.jpg" />
+									</div>
+								</li>
+								<li>
+									<div class="small-img">
+										<img src="img/purchase/fd4.jpg" />
+									</div>
+								</li>
+								<li>
+									<div class="small-img">
+										<img src="img/purchase/fd5.jpg" />
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!--缩略图-->
+					</div>
+					<div class="magnifier-view"></div>
+					<!--经过放大的图片显示容器-->
+				</div>
+			</div>
+			<div class="cet_right left">
+				<h3><strong>进口冰鲜三文鱼刺身拼盘生鱼片整条现杀中段新鲜即食婴儿辅食400g</strong></h3>
+				<span>当天现杀！！</span>
+				<div class="cr_price">
+					<span class="pre_label left">价格</span>
+					<h2 class="left"><strong>￥148.00</strong></h2>
+				</div>
+				<div>
+					<span class="pre_label left">运费</span>
+					<div class="pre_right">杭州</div>	<!--省份选项插件-->
+				</div>
+				<div class="pre_eva">
+					<div class="eva_left left">
+						<p>累计评价<span>1920</span></p>
+					</div>
+					<div class="eva_right left">
+						<p>送天猫积分<span>74</span></p>
+					</div>
+				</div>
+				<div class="pre_num">
+					<span class="pre_label left">数量</span>
+					<div class="pre_right">
+						<input type="text" id="t1" placeholder="1">	
+						<div class="pre_btn pre_top "><i class="iconfont icon-up"></i></div>
+						<div class="pre_btn pre_bottom"><i class="iconfont icon-down-copy"></i></div>
+						<span>件</span>
+						<div class="pre_btn2">
+							<div class="bn2_btn_buy left">
+								<h3>立即购买</h3>
+							</div>
+							<div class="bn2_btn_join left" onclick="fly()" id="fashe">
+								<h3><i class="iconfont icon-gouwuche"></i>&nbsp;加入购物车</h3>
+							</div>
+						</div>
+						<div class="pre_promise">
+							<span class="pre_label left">服务承诺</span>
+							<a href="">坏单包退</a>
+							<a href="">正品保证</a>
+							<a href="">极速退款</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!--商品选项卡轮播-->
+		<div class="f_lbGood wrap">
+			<div class="focus">
+				<ul class="silde-page clearfix">
+					<li class="on"><a href="javascript:void(0);">加6元换购带刺边角料</a></li>
+					<li><a href="javascript:void(0);">加30元换购瘦肉边角料</a></li>
+					<li><a href="javascript:void(0);">加50元换购三文鱼鱼排</a></li>
+				</ul>
+				<ul class="silde clearfix">
+					<li>
+						<div class="sle_goods">
+							<div class="gd_f">
+								<img src="img/purchase/gd1.jpg"/><span class="fst_add">+</span><br />
+								<input type="checkbox" checked="checked" disabled=false/>
+								<span>价格￥148.00</span>
+							</div>
+							<div class="gd_f">
+								<img src="img/purchase/gd2.jpg"/><br />
+								<input id="b1" type="checkbox" value="6"/>
+								<span>价格￥6.00</span>
+							</div>
+						</div>
+						<div class="sle_price">
+							<h3><span>套餐价:</span><strong>￥<label id="p1">148</label>.00</strong></h3>
+							<div class="pce_look">查看套餐</div>
+						</div>
+					</li>
+					<li>
+						<div class="sle_goods clearfix">
+							<div class="gd_f">
+								<img src="img/purchase/gd3.jpg"/><span class="fst_add">+</span><br />
+								<input type="checkbox"  checked="checked" disabled=false/>
+								<span>价格￥148.00</span>
+							</div>
+							<div class="gd_f">
+								<img src="img/purchase/gd4.jpg"/><br />
+								<input id="b2" type="checkbox"  value="30"/>
+								<span>价格￥30.00</span>
+							</div>
+						</div>
+						<div class="sle_price">
+							<h3><span>套餐价:</span><strong>￥<label id="p2">148</label>.00</strong></h3>
+							<div class="pce_look">查看套餐</div>
+						</div>
+					</li>
+					<li>
+						<div class="sle_goods clearfix">
+							<div class="gd_f">
+								<img src="img/purchase/gd3.jpg"/><span class="fst_add">+</span><br />
+								<input type="checkbox" checked="checked"  disabled=false/>
+								<span>价格￥148.00</span>
+							</div>
+							<div class="gd_f">
+								<img src="img/purchase/gd5.jpg"/><br />
+								<input id="b3" type="checkbox"  value="50"/>
+								<span>价格￥50.00</span>
+							</div>
+						</div>
+						<div class="sle_price">
+							<h3><span>套餐价:</span><strong>￥<label id="p3">148</label>.00</strong></h3>
+							<div class="pce_look">查看套餐</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--商品详情用户评论选项卡-->
+		<div class="f_sh wrap clearfix">
+			<div class="sh_l left">
+				<div class="dpName">
+					<div class="dp_title">
+						<h3>深水游旗舰店<span class="iconfont icon-aliwangwang"></span></h3>						
+					</div>
+					<div class="dp_wrap">						
+						<a id="m1" href="">在线客服：亮亮<span class="iconfont icon-aliwangwang"></span></a>
+						<a href="">在线客服：丽丽<span class="iconfont icon-aliwangwang"></span></a>
+						<div class="dpIn">进店逛逛</div>
+						<div class="dpSc">收藏店铺</div>	
+					</div>
+				</div>
+				<div class="dp_gg">
+					<img src="img/purchase/yc.jpg" />
+				</div>
+			</div>
+			<div class="sh_r left">
+				<div class="sp_group">
+					<div class="gp_1 active">
+						<a class="active" href="javascript:void(0);">商品详情</a>
+					</div>
+					<div class="gp_2">
+						<a href="javascript:void(0);">累计评价<span>1936</span></a>
+					</div>
+				</div>
+				<div class="sp_ms">
+					<div class="ms_kuang">
+						<h4>品牌名称：深水游</h4>
+						<h5>产品参数：</h5>
+						<table class="ms_dp">
+							<tr>
+								<td>厂名：福州深水游食品有限公司</td>
+								<td>厂址：福州市仓山区盖山镇上岐村上岐</td>
+								<td>厂家联系方式：15159905282</td>
+							</tr>
+							<tr>
+								<td>保质期：365 天</td>
+								<td>包装方式: 包装</td>
+								<td>品牌: 深水游</td>
+							</tr>
+							<tr>
+								<td>售卖方式: 单品</td>
+								<td>生鲜储存温度: -18℃</td>
+								<td>食品工艺: 鲜活水产</td>
+							</tr>
+							<tr>
+								<td>鱼肉部位: 鱼中段</td>
+								<td>产地: 挪威</td>
+								<td>套餐份量: 2人份</td>
+							</tr>
+							<tr>
+								<td>净含量: 400g</td>
+							</tr>
+						</table>
+					</div>
+					<div class="ms_date">
+						<span><i class="iconfont icon-time"></i>&nbsp;生产日期: 2018-01-01 至 2018-06-30</span>
+					</div>
+					<div class="ms_pic">
+						<img src="img/purchase/lazyPic.gif" class="lazy" data-original="img/purchase/ms1.jpg" />
+						<img src="img/purchase/lazyPic.gif" class="lazy" data-original="img/purchase/ms2.jpg" />
+						<img src="img/purchase/lazyPic.gif"  class="lazy" data-original="img/purchase/ms3.jpg"/>
+						<img src="img/purchase/lazyPic.gif"  class="lazy" data-original="img/purchase/ms4.jpg"/>
+						<img src="img/purchase/lazyPic.gif" class="lazy" data-original="img/purchase/ms5.jpg" />
+						<img src="img/purchase/lazyPic.gif"  class="lazy" data-original="img/purchase/ms6.jpg"/>
+						<img src="img/purchase/lazyPic.gif"  class="lazy" data-original="img/purchase/ms7.gif"/>
+						<img src="img/purchase/lazyPic.gif"  class="lazy" data-original="img/purchase/ms8.jpg"/>
+						<img src="img/purchase/lazyPic.gif"  class="lazy" data-original="img/purchase/ms9.jpg"/>
+						<img src="img/purchase/lazyPic.gif"  class="lazy" data-original="img/purchase/ms10.jpg"/>
+						<img src="img/purchase/lazyPic.gif"  class="lazy" data-original="img/purchase/ms11.jpg"/>
+						<img src="img/purchase/lazyPic.gif"  class="lazy" data-original="img/purchase/ms12.jpg"/>
+						<img src="img/purchase/lazyPic.gif"  class="lazy" data-original="img/purchase/ms13.jpg"/>
+					</div>
+				</div>
+				<div class="sp_talk clearfix">
+					<div class="tak_score clearfix">
+						<div class="sce_mark left">
+							<h4>您的评分：<br/><span id="hint"></span></h4>
+							
+						</div>
+						<div class="demo left">
+				          	<div id="default-demo"></div>
+				        </div>
+						<button id="btns"><a href="javascript:_confirm2()">提交评分</a></button>	
+					</div>
+					<div class="tak_top">
+						<div class="tp_left left">	
+							<input type="radio" checked="checked" name="textbox" value="1"/><label>全部</label>
+							<input type="radio" name="textbox" value="2"/><label>追评(50)</label>
+							<input type="radio" name="textbox" value="3"/><label>图片(305)</label>
+						</div>
+						<div class="tp_right right">
+							<input type="checkbox" checked="checked" />有内容
+							<div class="rt_sort">
+								按默认&nbsp;<i class="iconfont icon-down-copy"></i>
+								<div class="st_choice">
+									<p>按默认</p>
+									<p>按时间</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tak_yh">
+						<div class="yh_pl clearfix">
+							<div class="pl_l left">
+								<p>由于现代人生活压力大，生活节奏不断加快，环境不断变差等原因,因而也越来越多的人注意到了养生的问题。蜂蜜因其营养价值已经广泛的受众人群被称为“平价燕窝”,而土蜂蜜更被称为密中极品，其蜜色泽金黄、口味独特、纯净无杂，含有丰富的有营养。因而秦岭土蜂蜜现在也受到了很多人的喜爱，但也有很多人以次充好的败坏秦岭土蜂蜜的名声，对此我非常的气愤。作为祖辈生活在秦岭大山的人，今天我就来给大家聊聊正宗秦岭土蜂蜜</p>
+								<div class="pl_l_pic">
+									<img src="img/purchase/yh1.jpg" /><br />
+									<span>10.03</span>
+								</div>
+							</div>
+							<div class="pl_r right">
+								<p>湖***河(匿名)</p>
+								<span>超级会员</span>
+							</div>
+						</div>
+						<div class="yh_pl clearfix">
+							<div class="pl_l left">
+								<p>有一部分是靠近鱼尾部分，不全是中段</p>
+								<div class="pl_l_pic">
+									<img src="img/purchase/yh1.jpg" />
+									<img src="img/purchase/yh2.jpg" /><br />
+									<span>10.03</span>
+								</div>
+							</div>
+							<div class="pl_r right">
+								<p>湖***河(匿名)</p>
+								
+							</div>
+						</div>
+						<div class="yh_pl clearfix">
+							<div class="pl_l left">
+								<p>由于现代人生活压力大，生活节奏不断加快，环境不断变差等原因,因而也越来越多的人注意到了养生的问题。蜂蜜因其营养价值已经广泛的受众人群被称为“平价燕窝”,而土蜂蜜更被称为密中极品，其蜜色泽金黄、口味独特、纯净无杂，含有丰富的有营养。因而秦岭土蜂蜜现在也受到了很多人的喜爱，但也有很多人以次充好的败坏秦岭土蜂蜜的名声，对此我非常的气愤。作为祖辈生活在秦岭大山的人，今天我就来给大家聊聊正宗秦岭土蜂蜜</p>
+								<div class="pl_l_pic">
+									<img src="img/purchase/yh1.jpg" /><br />
+									<span>10.03</span>
+								</div>
+							</div>
+							<div class="pl_r right">
+								<p>湖***河(匿名)</p>
+								<span>超级会员</span>
+							</div>
+						</div>
+						<div class="yh_pl clearfix">
+							<div class="pl_l left">
+								<p>由于现代人生活压力大，生活节奏不断加快，环境不断变差等原因,因而也越来越多的人注意到了养生的问题。蜂蜜因其营养价值已经广泛的受众人群被称为“平价燕窝”,而土蜂蜜更被称为密中极品，其蜜色泽金黄、口味独特、纯净无杂，含有丰富的有营养。因而秦岭土蜂蜜现在也受到了很多人的喜爱，但也有很多人以次充好的败坏秦岭土蜂蜜的名声，对此我非常的气愤。作为祖辈生活在秦岭大山的人，今天我就来给大家聊聊正宗秦岭土蜂蜜</p>
+								<div class="pl_l_pic">
+									<img src="img/purchase/yh1.jpg" /><br />
+									<span>10.03</span>
+								</div>
+							</div>
+							<div class="pl_r right">
+								<p>湖***河(匿名)</p>
+								<span>超级会员</span>
+							</div>
+						</div>
+						<div class="yh_pl clearfix">
+							<div class="pl_l left">
+								<p>由于现代人生活压力大，生活节奏不断加快，环境不断变差等原因,因而也越来越多的人注意到了养生的问题。蜂蜜因其营养价值已经广泛的受众人群被称为“平价燕窝”,而土蜂蜜更被称为密中极品，其蜜色泽金黄、口味独特、纯净无杂，含有丰富的有营养。因而秦岭土蜂蜜现在也受到了很多人的喜爱，但也有很多人以次充好的败坏秦岭土蜂蜜的名声，对此我非常的气愤。作为祖辈生活在秦岭大山的人，今天我就来给大家聊聊正宗秦岭土蜂蜜</p>
+								<div class="pl_l_pic">
+									<img src="img/purchase/yh1.jpg" /><br />
+									<span>10.03</span>
+								</div>
+							</div>
+							<div class="pl_r right">
+								<p>湖***河(匿名)</p>
+								<span>超级会员</span>
+							</div>
+						</div>
+						<div class="yh_pl clearfix">
+							<div class="pl_l left">
+								<p>由于现代人生活压力大，生活节奏不断加快，环境不断变差等原因,因而也越来越多的人注意到了养生的问题。蜂蜜因其营养价值已经广泛的受众人群被称为“平价燕窝”,而土蜂蜜更被称为密中极品，其蜜色泽金黄、口味独特、纯净无杂，含有丰富的有营养。因而秦岭土蜂蜜现在也受到了很多人的喜爱，但也有很多人以次充好的败坏秦岭土蜂蜜的名声，对此我非常的气愤。作为祖辈生活在秦岭大山的人，今天我就来给大家聊聊正宗秦岭土蜂蜜</p>
+								<div class="pl_l_pic">
+									<img src="img/purchase/yh1.jpg" /><br />
+									<span>10.03</span>
+								</div>
+							</div>
+							<div class="pl_r right">
+								<p>湖***河(匿名)</p>
+								<span>超级会员</span>
+							</div>
+						</div>
+						<div class="yh_pl clearfix">
+							<div class="pl_l left">
+								<p>由于现代人生活压力大，生活节奏不断加快，环境不断变差等原因,因而也越来越多的人注意到了养生的问题。蜂蜜因其营养价值已经广泛的受众人群被称为“平价燕窝”,而土蜂蜜更被称为密中极品，其蜜色泽金黄、口味独特、纯净无杂，含有丰富的有营养。因而秦岭土蜂蜜现在也受到了很多人的喜爱，但也有很多人以次充好的败坏秦岭土蜂蜜的名声，对此我非常的气愤。作为祖辈生活在秦岭大山的人，今天我就来给大家聊聊正宗秦岭土蜂蜜</p>
+								<div class="pl_l_pic">
+									<img src="img/purchase/yh1.jpg" /><br />
+									<span>10.03</span>
+								</div>
+							</div>
+							<div class="pl_r right">
+								<p>湖***河(匿名)</p>
+								<span>超级会员</span>
+							</div>
+						</div>
+						<div class="yh_pl clearfix">
+							<div class="pl_l left">
+								<p>由于现代人生活压力大，生活节奏不断加快，环境不断变差等原因,因而也越来越多的人注意到了养生的问题。蜂蜜因其营养价值已经广泛的受众人群被称为“平价燕窝”,而土蜂蜜更被称为密中极品，其蜜色泽金黄、口味独特、纯净无杂，含有丰富的有营养。因而秦岭土蜂蜜现在也受到了很多人的喜爱，但也有很多人以次充好的败坏秦岭土蜂蜜的名声，对此我非常的气愤。作为祖辈生活在秦岭大山的人，今天我就来给大家聊聊正宗秦岭土蜂蜜</p>
+								<div class="pl_l_pic">
+									<img src="img/purchase/yh1.jpg" /><br />
+									<span>10.03</span>
+								</div>
+							</div>
+							<div class="pl_r right">
+								<p>湖***河(匿名)</p>
+								<span>超级会员</span>
+							</div>
+						</div>
+						<div class="yh_pl clearfix">
+							<div class="pl_l left">
+								<p>由于现代人生活压力大，生活节奏不断加快，环境不断变差等原因,因而也越来越多的人注意到了养生的问题。蜂蜜因其营养价值已经广泛的受众人群被称为“平价燕窝”,而土蜂蜜更被称为密中极品，其蜜色泽金黄、口味独特、纯净无杂，含有丰富的有营养。因而秦岭土蜂蜜现在也受到了很多人的喜爱，但也有很多人以次充好的败坏秦岭土蜂蜜的名声，对此我非常的气愤。作为祖辈生活在秦岭大山的人，今天我就来给大家聊聊正宗秦岭土蜂蜜</p>
+								<div class="pl_l_pic">
+									<img src="img/purchase/yh1.jpg" /><br />
+									<span>10.03</span>
+								</div>
+							</div>
+							<div class="pl_r right">
+								<p>湖***河(匿名)</p>
+								<span>超级会员</span>
+							</div>
+						</div>
+						<div class="yh_pl clearfix">
+							<div class="pl_l left">
+								<p>由于现代人生活压力大，生活节奏不断加快，环境不断变差等原因,因而也越来越多的人注意到了养生的问题。蜂蜜因其营养价值已经广泛的受众人群被称为“平价燕窝”,而土蜂蜜更被称为密中极品，其蜜色泽金黄、口味独特、纯净无杂，含有丰富的有营养。因而秦岭土蜂蜜现在也受到了很多人的喜爱，但也有很多人以次充好的败坏秦岭土蜂蜜的名声，对此我非常的气愤。作为祖辈生活在秦岭大山的人，今天我就来给大家聊聊正宗秦岭土蜂蜜</p>
+								<div class="pl_l_pic">
+									<img src="img/purchase/yh1.jpg" /><br />
+									<span>10.03</span>
+								</div>
+							</div>
+							<div class="pl_r right">
+								<p>湖***河(匿名)</p>
+								<span>超级会员</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<!--右侧广告位-->
+		<div class="ad_con iconfont icon-guanbi"></div>
+		<div class="f_ad swiper-container">
+			<div class="swiper-wrapper">
+				<div class="ad_gd swiper-slide">
+					<div class="ad_gd">
+						<img src="img/purchase/cm1.jpg" />
+						<p>进口冰鲜三文鱼刺身拼盘生鱼片整条现杀中段新鲜即食婴儿辅食400g</p>	
+					</div>
+					<div class="ad_gd">
+						<img src="img/purchase/cm2.jpg" />
+						<p>进口冰鲜三文鱼刺身拼盘生鱼片整条现杀中段新鲜即食婴儿辅食400g</p>	
+					</div>
+					<div class="ad_gd">
+						<img src="img/purchase/cm3.jpg" />
+						<p>进口冰鲜三文鱼刺身拼盘生鱼片整条现杀中段新鲜即食婴儿辅食400g</p>	
+					</div>
+				</div>
+				<div class="ad_gd swiper-slide">
+					<div class="ad_gd">
+						<img src="img/purchase/cm4.jpg" />
+						<p>进口冰鲜三文鱼刺身拼盘生鱼片整条现杀中段新鲜即食婴儿辅食400g</p>	
+					</div>
+					<div class="ad_gd">
+						<img src="img/purchase/cm5.jpg" />
+						<p>进口冰鲜三文鱼刺身拼盘生鱼片整条现杀中段新鲜即食婴儿辅食400g</p>	
+					</div>
+					<div class="ad_gd">
+						<img src="img/purchase/cm6.jpg" />
+						<p>进口冰鲜三文鱼刺身拼盘生鱼片整条现杀中段新鲜即食婴儿辅食400g</p>	
+					</div>
+				</div>
+				<div class="ad_gd swiper-slide">
+					<div class="ad_gd">
+						<img src="img/purchase/cm7.jpg" />
+						<p>进口冰鲜三文鱼刺身拼盘生鱼片整条现杀中段新鲜即食婴儿辅食400g</p>	
+					</div>
+					<div class="ad_gd">
+						<img src="img/purchase/cm8.jpg" />
+						<p>进口冰鲜三文鱼刺身拼盘生鱼片整条现杀中段新鲜即食婴儿辅食400g</p>	
+					</div>
+					<div class="ad_gd">
+						<img src="img/purchase/cm9.jpg" />
+						<p>进口冰鲜三文鱼刺身拼盘生鱼片整条现杀中段新鲜即食婴儿辅食400g</p>	
+					</div>
+				</div>
+			</div>
+		</div>		
+		<!--底部-->
+		<footer>
+			<div class="f_bottom clearfix">
+				<ul>
+					<li><i class="iconfont icon-you"></i><p>品质保障</p><span>品质护航，购物无忧</span></li>
+					<li><i class="iconfont icon-tui"></i><p>七天无理由退货</p><span>为您提供售后无忧保障</span></li>
+					<li><i class="iconfont icon-tese"></i><p>特色服务体验</p><span>为您呈现不一样的服务</span></li>
+					<li><i class="iconfont icon-zhinan"></i><p>帮助中心</p><span>您的购物指南</span></li>
+				</ul>
+			</div>
+			<div class="f_bottom2 wrap clearfix">
+				<ul>
+					<li>
+						<h4>购物指南</h4>
+						<p><a href="">免费注册</a></p>
+						<p><a href="">开通支付宝</a></p>
+						<p><a href="">支付宝充值</a></p>
+					</li>
+					<li>
+						<h4>天猫保障</h4>
+						<p><a href="">发票保障</a></p>
+						<p><a href="">售后规则</a></p>
+						<p><a href="">缺货赔付</a></p>
+					</li>
+					<li>
+						<h4>支付方式</h4>
+						<p><a href="">快捷支付</a></p>
+						<p><a href="">信用卡</a></p>
+						<p><a href="">余额宝</a></p>
+						<p><a href="">蚂蚁花呗</a></p>
+						<p><a href="">货到付款</a></p>
+					</li>
+					<li>
+						<h4>商家服务</h4>
+						<p><a href="">天猫规则</a></p>
+						<p><a href="">商家入驻</a></p>
+						<p><a href="">商家中心</a></p>
+						<p><a href="">运营服务</a></p>
+						<p><a href="">物流服务</a></p>
+						<p><a href="">天猫智库</a></p>
+					</li>
+					<li>
+						<h4>手机扫码</h4>
+						<p><img src="img/shop/twoWM.png"></p>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<!--右侧购物车固定栏-->
+		<div class="f_cartR">
+			<div class="ctR_l left">
+				<p id="jieshou"><a href="javasrcipt:void()"><i class="iconfont icon-gouwuche"></i><br />购物车<label id="cartN">0</label></a></p>
+				<div class="c_money"></label><i class="iconfont icon-money"></i></div>
+				<div class="c_collection"><i class="iconfont icon-shoucang"></i></div>
+				<div class="c_see"><i class="iconfont icon-time"></i></div>
+				<span class="ct_btm">
+					<div class="c_feedback"><i class="iconfont icon-yonghufankui03"></i></div>
+					<div class="c_pic"><i class="iconfont icon-erweima"></i></div>
+					<div class="rightMenu"><i class="iconfont icon-TOP"></i></div>	
+				</span>
+			</div>
+			<div class="ctR_r left">
+				<div class="cr_top">
+					<input type="checkbox" id="allXuan"/>&nbsp;全选
+				</div>
+				<div class="cr_container">
+					<ul>
+						<li>
+							<div class="conr_dp">
+								<input type="checkbox" class="dp_checked" />
+								<h3>町田零食</h3>
+								<label class="sp_close right">x</label>
+							</div>
+							<div class="conr_sp">
+								<div>
+									<input type="checkbox" class="sp_checked"/>
+									<img src="img/purchase/cart.jpg" />
+									<div class="sp_sl">
+										<label class="sp_del">-</label>
+										<span class="sp_num">1</span>
+										<label class="sp_add">+</label>	
+									</div>
+									<span class="sp_jg">￥<label>15.40</label></span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="conr_dp">
+								<input type="checkbox" class="dp_checked" />
+								<h3>天猫超市生鲜店</h3>
+								<label class="sp_close right">x</label>
+							</div>
+							<div class="conr_sp">
+								<div>
+									<input type="checkbox" class="sp_checked" />
+									<img src="img/purchase/cart1.jpg" />
+									<div class="sp_sl">
+										<label class="sp_del">-</label>
+										<span class="sp_num">1</span>
+										<label class="sp_add">+</label>	
+									</div>
+									<span class="sp_jg">￥<label>6.90</label></span>
+								</div>
+							</div>
+						</li>
+						<li id="ssY">
+							<div class="conr_dp">
+								<input type="checkbox" class="dp_checked"/>
+								<h3>深水游旗舰店</h3>
+								<label class="sp_close right">x</label>
+							</div>
+							<div class="conr_sp">
+								<div>
+									<input type="checkbox" class="sp_checked" />
+									<img src="img/purchase/cart2.jpg" />
+									<div class="sp_sl">
+										<label class="sp_del">-</label>
+										<span class="sp_num" id="ssYou">1</span>
+										<label class="sp_add">+</label>	
+									</div>
+									<span class="sp_jg">￥<label>9.90</label></span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="cr_bottom">
+					<div class="btm_sl clearfix">
+						<span class="left">已选<label id="tXuan">0</label>件</span>
+						<span class="right">￥<label id="cart_sum">0.00</label></span>
+					</div>
+					<div class="btm_btn">结算</div>
+				</div>
+			</div>
+		</div>
+		<!-- 固定栏提示 -->
+		<div class="my_money">
+		    <div class="rectangle">我的资产</div>
+		</div>
+		<div class="my_collection">
+		    <div class="rectangle">我的收藏</div>
+		</div>
+		<div class="my_see">
+		    <div class="rectangle">我看过的</div>
+		</div>
+		<div class="my_feedback">
+		    <div class="rectangle">用户反馈</div>
+		</div>
+		<div class="my_pic">
+		    <img class="pic_re" src="img/shop/twoWM.png">
+		</div>
+		<div class="my_top">
+		    <div class="rectangle">返回顶部</div>
+		</div>
+	</body>
+	<!--jquery-->
+	<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+	<!--放大镜-->
+	<script type="text/javascript" src="js/magnifier.js" ></script>
+	<!--购买-->
+	<script type="text/javascript" src="js/purchase.js" ></script>
+	<!--懒加载-->
+	<script type="text/javascript" src="lib/jquery.lazyload.min.js"></script>
+	<!--轮播图-->
+	<script type="text/javascript" src="lib/swiper.min.js"></script>
+	<!--评分-->
+	<script type="text/javascript" src="lib/star/lib/jquery.raty.min.js"></script>
+	<!--模态框-->
+	<script type="text/javascript" src="lib/zeroModal.min.js"></script>
+	<!--对百度关键词库跨域-->
+	<script src="lib/vue.js"></script>
+	<script src="lib/vue-resource.js"></script>
+	<!--搜索框-->
+	<script src="js/search.js"></script>
+	<!--添加购车效果-->
+	<script src="lib/fly.js"></script>
+	<script src="js/flyP.js"></script>
+
+	
+	<script> 
+		//配置放大镜
+		$(function() {
+	
+			var magnifierConfig = {
+				magnifier : "#magnifier1",//最外层的大容器
+				width : 430,//承载容器宽
+				height : 400,//承载容器高
+				moveWidth : null,//如果设置了移动盒子的宽度，则不计算缩放比例
+				zoom : 2.5//缩放比例
+			};
+			
+			var _magnifier = magnifier(magnifierConfig);
+			
+			/*magnifier的内置函数调用*/
+			
+				//设置magnifier函数的index属性
+				_magnifier.setIndex(0);
+			
+				//重新载入主图,根据magnifier函数的index属性
+				_magnifier.eqImg(0);
+			
+		});
+		
+		//配置轮播图
+		var mySwiper = new Swiper('.swiper-container', {
+			direction:"vertical",
+			autoplay: 2000,//可选选项，自动滑动
+			autoplayDisableOnInteraction:false,//滑动完毕之后继续autoplay
+			loop:true,//无缝循环
+			pagination : '.swiper-pagination',//实现分页
+			paginationType: "bullets",//"bullets" "fraction" "progress"
+			//paginationClickable:true,//是否点击bullets
+			effect:"slide",//效果默认值 “slide" " fade" "cube" "coverflow" "flip"
+		});
+		
+		
+		//配置评分
+		$.fn.raty.defaults.path = 'lib/star/lib/img';
+    	$('#default-demo').raty({
+    		target : '#hint',			//绑定显示位置的id
+  			targetType : 'number',		//返回数字
+  			score: function() {			//返回星星字段
+				return $(this).attr('data-score');
+			},
+			half:true,			//显示半星
+			targetKeep:true 	//字段保持显示
+    	});
+    	
+    	//配置模态框
+    	function _confirm2() {
+	        zeroModal.confirm({
+	            content: '确定提交评分吗？',
+	            contentDetail: '提交后将不能进行修改。',
+	            okFn: function() {
+	            	$(".demo").empty();
+	            	$("#btns").remove();
+	            	var $cuss=$("<p class='de_success'>评分成功！</p>")
+	            	$(".demo").append($cuss);
+	            },
+	            cancelFn: function() {
+	                
+	            }
+        	});
+    	}
+    	
+    	//配置懒加载
+		$(function(){
+			$("img.lazy").lazyload({
+				effect:"fadeIn",//"slideDown"
+				//event:"click",
+				threshold:200
+			});
+		})
+
+	</script>
+</html>

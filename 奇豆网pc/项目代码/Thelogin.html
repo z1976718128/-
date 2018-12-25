@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录奇豆</title>
+		<link rel="stylesheet" type="text/css" href="css/Thelogin.css"/>
+		<link rel="shortcut icon" type="text/css" href="img/Thelogin-img/奇豆-logo.gif"/>
+		<link rel="stylesheet" type="text/css" href="css/unlock.css"/>
+		<style type="text/css">
+			.bar {
+				height: 40px;
+				width: 270px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="warp">
+				<div class="logo-img fl">
+					<a href="javascript:(0)"><img src="img/Thelogin-img/奇豆.gif"/></a>					
+				</div>
+				<div class="logo-d">
+					<a href="javascript:(0)">登录</a>
+				</div>
+				<div class="logo-r fr">
+					还没有奇豆帐号？
+					<a class="logo-btn" href="javascript:(0)">注册</a>
+				</div>
+			</div>
+		</header>
+		<article>
+			<div class="warp">
+				<div class="banner fl"></div>
+				<div class="banner-right">
+					<div class="form-title">
+						登录百度糯米
+					</div>
+					<p class="validation"></p>
+					<div class="form-list">
+						<form action="index.html" method="post" autocomplete="on">
+							<p class="list-p">
+								<label class="user-label" for="user"></label>
+								<input  type="text"  id="user" placeholder="账号:wt23" maxlength="4" />
+							</p>
+							
+							<p class="list2-p">
+								<label class="pass-label" for="pass"></label>
+								<input type="password"  id="pass" placeholder="密码:wt23" maxlength="4"/>
+							</p>
+							<p class="membe">
+								<input type="checkbox"  id="male" />
+								<label for="male">记住密码</label>
+								<a class="fr" href="javascript:(0)">登录遇到问题？</a>
+							</p>
+							<div class="">
+								<div class="bar3 bar"></div>							
+							</div>
+							<p class="form-foot">
+								<input type="button" class="btn" value="登录"/>								
+							</p>
+						</form>
+						<div class="">
+							<a href="javascript:(0)"><img src="img/Thelogin-img/QQ.png"/></a>
+							<a href="javascript:(0)"><img src="img/Thelogin-img/微信.png"/></a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<footer>
+			<div class="warp">
+				<div class="links">
+						<a href="">关于百度糯米</a>
+						<span>|</span>
+						<a href="">常见问题</a>
+						<span>|</span>
+						<a href="">违规投诉</a>
+						<span>|</span>
+						<a href="">开放平台</a>
+						<span>|</span>
+						<a href="">用户协议</a>
+						<span>|</span>
+						<a href=""> 客服电话：400-9216-666（每天9:00 - 22:00）</a>
+					</ul>
+				</div>
+			</div>
+				<div class="site-info">
+					©2015 nuomi.com 京ICP证030173号  京公网安备12345678901号
+				</div>
+		</footer>
+	</body>
+	<script type="text/javascript" src="lib/jquery-2.1.0.js" ></script>
+	<script type="text/javascript" src="js/Thelogin.js" ></script>
+	<script type="text/javascript" src="lib/unlock.js" ></script>
+	<script>
+		$('.bar3').slideToUnlock({
+				text : '滑动验证',
+				succText : '验证成功'
+			});
+	</script>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>查询机票首页</title>
+		<link rel="shortcut icon" type="text/css" href="img/p-img/log.ico"/>
+		<!--外部样式-->
+		<link rel="stylesheet" type="text/css" href="css/Plane-search.css" />
+		<!--阿里巴巴矢量图标-->
+		<link rel="shortcut icon" type="text/css" href="img/p-img/奇豆-logo.gif"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<!--电梯阿里图标-->
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_812996_0hm0h2ppy9c7.css"/>
+		<script src="js/jquery-2.1.0.js"></script>
+	</head>
+	<body>
+
+		<!--头部logo开始-->
+		<div class="header-logo">
+			<div class="logo-box">
+				<div class="nuomilog fl"></div>
+				<div class="ctriplog fl"></div>
+				<img class="fr" src="img/p-img/dl_banner01.png" />
+			</div>
+		</div>
+		<!--头部logo结束-->
+		<!--机票导航栏开始-->
+		<div class="P-ticket">
+			<ul>
+				<li class="fl lz">
+					<a href="">国内机票</a>
+				</li>
+				<li class="fl">
+					<a href="">国际机票</a> 
+				</li>
+				<a href="" class="fr">登录携程</a>
+			</ul>
+		</div>
+		<!--机票导航栏结束-->
+		<!--乘机信息开始-->
+		<div class="header-wrap-a">
+			<div class="header-wrap">
+				<ul>
+					<li><i class="iconfont icon-feiji1"></i>乘机信息</li>
+					<li>增值服务</li>
+					<li>支付</li>
+					<li>完成</li>
+				</ul>
+			</div>
+		</div>
+		<!--乘机信息结束-->
+		<!--中间内容开始-->
+		<div class="container-box">
+			<div class="container">
+				<div class="container-Reserve">
+					<i class="iconfont icon-buywebhostingstep1domaintaken"></i>
+					<span>&nbsp;&nbsp;您预订的产品不可使用港澳通行证预订。</span><br/>
+					<i class="iconfont icon-buywebhostingstep1domaintaken"></i>
+					<span>&nbsp;&nbsp;该航班预计在扣款成功后80分钟内完成出票，保障出行。</span><br />
+					<i class="iconfont icon-buywebhostingstep1domaintaken"></i>
+					<span>&nbsp;&nbsp;目前该舱位仅剩8个座位，请尽快完成预订。</span>
+				</div>
+				<div class="container-Passenger">
+					<div class="container-Pass">
+						<h3>乘客</h3>
+					</div>
+					<div class="container-identity">
+						<div class="contai">
+							<i class="i-one">1</i>
+							<input type="text" id="to" class="inpur-on" placeholder="姓名，请与登记证件姓名保持一致">
+							<span class="regular">不能填写非汉字</span>
+							<div class="form">
+								<span>身份证
+									<label for="kk"></label>
+								<i id="kk" class="iconfont icon-xiangxia"></i>
+							</span>
+								<input id="p" type="text" placeholder="登记证件号码" />
+								<p class="te-w">请填写18位的数字</p>
+							</div>
+							<br />
+							<i class="i-one">1</i>
+							<div class="form">
+								<span>中国大陆区号86
+									<label for="kk"></label>
+								<i id="kk" class="iconfont icon-xiangxia"></i>
+							</span>
+								<input id="uu" type="text" placeholder="乘机人手机号码(选填)" />
+								<p class="pp-o">请输入您的电话号码</p>
+							</div>
+							<div class="Pass-card">
+								<input type="checkbox" id="hh" />
+								<label for="hh">
+									常旅客卡
+								</label>
+							</div>
+						</div>
+						<div class="right-indent fr">
+							<span>订票.前程无忧</span>
+						</div>
+					</div>
+					<div class="add">
+						<a href="" class="add-to">
+							+&nbsp;添加乘客
+						</a>
+					</div>
+					<div class="contact">
+						<h3>联系人</h3>
+						<div class="contact-box">
+							<label for="vv">
+								<div class="fl">
+									<input type="text" id="vv" value="中国大陆区号+86"/>
+									<i class="iconfont icon-xiangxia"></i>
+								</div>
+							</label>
+							<input class="hangbian1" type="text" placeholder="手机号、接收航变信息" />
+							<input class="hangbian2" type="text" placeholder="Email(选填，接收航变信息)" />
+						</div>
+						<a class="ne-step btn-po">
+							下一步
+						</a>
+						<div class="foter">
+							<p>Copyright© 1999-2018, ctrip.com. all rights reserved.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="divright fr">
+				<div class="divright-time">
+					<div class="time">
+						<span>10-09</span>
+						<span>周二</span>
+						<i class="iconfont icon-xiangyou1"></i>
+						<span>成都</span>
+						<span>北京</span>
+					</div>
+					<div class="cangwei">
+						<img src="img/p-img/cz.png" />
+						<span>南方航空 CZ6136</span>
+						<span>空中客车 A330</span>
+						<span>经济舱</span>
+					</div>
+					<div class="item2">
+						<span>21:30</span><br />
+						<span>双流国际机场T2</span>
+						<div class="con">
+							<div class="con-l">
+								<i class="iconfont icon-web-icon-">&nbsp;2h45m</i>
+								<i class="iconfont icon-feiji2"></i>
+								<i class="radiu"></i>
+								<i class="radiu2"></i>
+							</div>
+						</div>
+						<span class="fr">00:25</span><br />
+						<span class="fr">首都国际机场T2</span>
+					</div>
+				</div>
+				<hr />
+				<div class="right-footer">
+					<div class="footer-box">
+						<ul>
+							<li>成人<span class="left-f">退改￥225起</span><span class="left-f">行李额</span><span class="rightz">￥750X1</span></li>
+							<li>机建<span class="rightz">￥50X1</span></li>
+							<li>燃油费<span class="rightz">￥30X1</span></li>
+						</ul>
+					</div>
+				</div>
+		</div>
+		<!--中间内容结束-->
+		<!--模态框开始--> 
+		<div class="box-jj">
+			<div class="box-uuu">
+				<div class="Tips-box">
+					<p>登录可享:积分换礼、预定返现、更快速的预定</p>
+					<hr />
+				<div class="form-box">
+					<div>
+						<label for="ss">							
+							<input type="radio" name="mm"  checked="checked" id="ss" value="" />普通登录
+						</label>
+						<label for="dd">							
+							<input type="radio" name="mm" id="dd" value="" />手机动态密码登录
+						</label>
+						<div class="register">
+							<div class="cent">								
+								<label for="deng"><span>登录名</span></label><input id="deng" type="text" placeholder="用户名/卡号/手机/邮箱" /><br />
+							</div>
+								<div class="pp">
+									<label id="pp" for="lu"><span>密码</span></label><input id="lu" type="text" name="" id="" value="" />
+									<span class="oo">忘记密码?</span>
+								</div>
+								<div class="zidong">
+									<input id="zidong" type="checkbox" checked="checked"  />
+									<label for="zidong"><span>30天自动登录</span></label>
+								</div>
+						</div>
+					</div>
+					<button class="zhu-btn">登录</button><span class="zhu-span">免费注册</span>
+					<ul class="zhu-ul">
+						<li>其他登录:</li>
+						<li>合作卡</li>
+						<li>公司客户</li>
+						<li>第三方账号</li>
+					</ul>
+				</div>
+				</div>
+				<!--<a href="Plane-travels.html">look、look</a>-->
+			<div class="box-right">
+				<div class="box-contai">
+					<div class="box-fei">						
+						<p>非会员预定</p>
+						<button class="btn-a">不登录直接预定</button>
+					</div>
+				</div>
+			</div>
+				
+			</div>
+			<div class="show-btn">
+				<div class="show-img">
+					<img src="img/p-img/hd_bg.png"/>
+					<span>机票价格变动频繁，正在为您锁定价格</span>
+				</div>
+				<div class="show-size">
+					<span><strong>接送机劵包</strong>为您提供更优质的服务</span>
+				</div>
+				<div class="show-di">					
+					<p>总可抵用<span>￥130</span></p>
+				</div>
+				<div class="clear-i">
+					<a href="index.html">暂不预定,返回首页</a>
+					<a href="Plane-travels.html">预定前查看当地旅游文化</a>
+				</div>
+			</div>
+		</div>
+		<div class="box-ttt"></div>
+		<!--电梯-->
+		<div class="con-box-pp">
+			<div class="box-xx">
+				<a class="iconfont vv icon-top" title="回顶部"></a>
+				<a href="index.html" class="iconfont vv icon-fanhuishouye" title="回首页"></a>
+				<a href="food.html" class="iconfont vv icon-meishi" title="去美食"></a>
+			</div>
+		</div>
+		<script>
+//			电梯
+			var loss=document.getElementsByClassName("box-xx")[0]
+			var fanhuishouye=document.getElementsByClassName("icon-top")[0]
+			window.onscroll=function(){
+				var scroll=document.documentElement.scrollTop||document.body.scrollTop
+				if(scroll>10){
+					loss.style.display="block"
+				}else{
+					loss.style.display="none"
+				}
+				console.log(scroll)
+			}
+			fanhuishouye.onclick=function(){
+				var time;
+				time=setInterval(function(){
+					var scroll=document.documentElement.scrollTop||document.body.scrollTop
+					document.body.scrollTop-=100
+					document.documentElement.scrollTop-=100
+					if(scroll==0){
+						clearInterval(time)
+					}
+				},20)
+			}
+			
+			$(".P-ticket ul li").siblings("li").hover(function(){
+				 $(this).toggleClass("lz").siblings("li").removeClass("lz")
+			},function(){
+				$(this).addClass("lz")
+			})
+			
+			
+			//正则
+			$("#to").on("keyup",function(){
+					var $t =$("#to").val();
+					var loss=/^[\u4e00-\u9fa5]+$/
+					if(!loss.test($t)) {
+						$(".regular").css("opacity",1)
+					}else if(loss.test($t)){
+						$(".regular").css("opacity",0)
+					}
+				})
+				$("#to").blur(function(){
+						$(".regular").css("opacity",0)
+				})
+				$("#to").blur(function(){
+					var $t =$("#to").val();
+					var loss=/[\w\s]+/
+					if(loss.test($t)){
+						$(".regular").css("opacity",1)
+					}else if($t==""){
+						$(".regular").css("opacity",0)
+					} 
+				})
+				
+				$("#p").on("keyup",function(){
+					var $u= $("#p").val()
+					var loss=/^[0-9]{18}$/
+					if(!loss.test($u)){
+						$(".te-w").css("opacity",1)
+					}else{
+						$(".te-w").css("opacity",0)
+					}
+				})
+				$("#p").blur(function(){
+					var p=$("#p").val()
+					var loss=/^[0-9]{18}$/
+					if(loss.test(p)){
+						$(".te-w").css("opacity",0)						
+					}else{
+						$(".te-w").css("opacity",1)	
+					}
+					if(p==""){
+						$(".te-w").css("opacity",0)
+					}
+				})
+				
+				$("#uu").on("keyup",function(){
+					var loss=/[0-9]{11}/
+					var val=$("#uu").val()
+					if(!loss.test(val)){
+						$(".pp-o").css("opacity",1)
+					}else{
+						$(".pp-o").css("opacity",0)
+					}
+					
+				})
+				
+				$("#uu").blur(function(){
+					var loss=/^[0-9]{11}$/
+					var val=$("#uu").val()
+					if(!loss.test(val)){
+						$(".pp-o").css("opacity",1)
+					}else{
+						$(".pp-o").css("opacity",0)
+					}
+					if(val==""){
+						$(".pp-o").css("opacity",0)
+						
+					}
+				})
+				
+				//模态框
+				$(".btn-po").on("click",function(){
+					$(".show-btn").css("display","none")
+					$(".box-uuu").css("display","block")
+					$(".box-ttt").css("background","#CCCCCC")
+					$(".box-jj").fadeIn()
+					$(".box-ttt").fadeIn()
+					$(".box-jj").animate({"top":'45%'},1000)
+				})
+				$(".btn-a").click(function(){
+					$(".box-uuu").css("display","none")
+					$(".show-btn").css("display","block")
+				})
+				$(".box-uuu span").on("click",function(){
+					$(".box-ttt").css("display","none")
+					$(".box-uuu").css("display","none")
+					$(".box-jj").css("background","none")
+				},function(){
+					$(".box-jj").animate({"top":'-50%'})
+					$(".box-ttt").css("background","none")
+					$(".box-ttt").css("display","none")
+				})
+					//获取焦点的时候 显示提示信息
+		$("#to").on("focus",function(){
+			$(".regular").css("opacity",1)
+		})
+			$("#p").focus(function(){
+		$(".te-w").css("opacity",1)
+	})
+		$("#uu").focus(function(){
+			$(".pp-o").css("opacity",1)
+		})
+		
+		$(".box-ttt").click(function(){
+					$(".box-jj").animate({"top":'-50%'})
+			
+			$(".box-ttt").css("display","none")
+			
+		})
+		</script>
+	</body>
+<!--P-ticket-->
+</html>

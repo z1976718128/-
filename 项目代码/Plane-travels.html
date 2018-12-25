@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!--html-css文件(less写的)-->
+		<link rel="stylesheet" type="text/css" href="css/Plane-travels.css" />
+		<!--阿里巴巴矢量图标-->
+		<!--<link rel="stylesheet" type="text/css" href="css/iconfont.css" />-->
+		<!--video视频插件-->
+		<link rel="shortcut icon" type="text/css" href="img/p-img/奇豆-logo.gif" />
+		<!--jquery文件-->
+		<link href="css/video-js.min.css" rel="stylesheet">
+		<script src="js/jquery-2.1.0.js"></script>
+		<title>最新游记攻略大全</title>
+		<!--电梯图标阿里巴巴-->
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_812996_0hm0h2ppy9c7.css"/>
+	</head>
+
+	<body>
+		<!--header头部开始-->
+		<div class="header">
+			<div class="header-box">
+				<i></i>
+				<div class="input-box">
+					<a>
+						<span>目的地</span>|<span>游记</span><span class="iconfont icon-xiala"></span>
+					</a>
+					<input type="text" />
+					<button class="iconfont icon-fangdajing"></button>
+				</div>
+				<ul>
+					<li>登录</li>
+					<li>注册</li>
+					<li>手机号订单</li>
+				</ul>
+			</div>
+		</div>
+		<!--header头部结束-->
+		<!--导航条开始-->
+		<div class="navigation">
+			<div class="navigation-box">
+				<a href="index.html" class="index-shou">首页</a>
+				<span class="span-hov fl">
+					<span class="hover-item">目的地攻略</span>
+				<i class="iconfont icon-xia xia1"></i>
+				<div href="" class="heid-span">
+					<span>目的地</span>
+					<span>攻略下载</span>
+				</div>
+				</span>
+				<p><i class="iconfont icon-remen"></i>行程计划</p>
+				<i id="i-banz"></i>
+				<ul>
+					<li class="youji">游记</li>
+					<li>画册</li><i id="i-banr"></i>
+					<li>
+						<a href="Plane-ticket.html" class="jipiao">机票</a>
+					</li>
+					<li>酒店</li>
+					<li>
+						<a href="tourism.html" class="lvyou">度假</a>
+					</li><i id="i-bans"></i>
+					<li class="item-ul">旅行家<i class="iconfont icon-xia xia2"></i>
+						<a href="javascript:(0)">
+							<span>梦想旅行家</span>
+							<span>达仁堂</span>
+							<span>校园沙伐旅</span>
+						</a>
+					</li>
+				</ul>
+				<ul class="iphoe">
+					<li>
+						<i class="iconfont icon-liwu"></i>免费兑换
+					</li>
+					<li>
+						<i class="iconfont icon-shouji"></i>手机应用
+					</li>
+				</ul>
+				<!--导航条结束-->
+			</div>
+		</div>
+		<!--做一个世界水手开始-->
+		<div class="nav-box">
+			<div class="nav-container">
+				<img class="img-one" src="img/p-img/ea85a945e79fc77fcffca3b5.jpg" />
+				<img class="img-two" src="img/p-img/3801213fb80e7bec86619a532e2eb9389a506bcd.jpg" />
+				<button class="na-btn"><i class="iconfont icon-write"></i><span>发表游记攻略</span></button>
+			</div>
+		</div>
+		<!--做一个世界水手结束-->
+		<!--右侧力推和人气开始-->
+		<div class="container--box">
+			<div class="left-box">
+				<div class="header-noe">
+					<p>版主力推</p>
+					<span>热门</span>
+					<span>优质精华</span>
+				</div>
+				<div class="header-nac">
+					<span>热门目的地</span>
+					<ul class="mudi">
+						<li>厦门</li>
+						<li>三亚</li>
+						<li>北京</li>
+						<li>天津</li>
+						<li>河南</li>
+						<li>安徽</li>
+						<li>深圳</li>
+						<li>芜湖</li>
+					</ul>
+
+				</div>
+			</div>
+			<!--人气开始-->
+			<div class="renqi">
+				<div class="p-dom">
+					<p class="hover-item">人气游记帮</p>
+					<p>经典游记帮</p>
+				</div>
+				<ul class="ul-dom">
+					<li>01<i></i>
+						<a href="">【泰国之行-----将小资和.</a>
+					</li>
+					<li>02<i></i>
+						<a href="">【大美青海】去西北，..</a>
+					</li>
+					<li>03<i></i>
+						<a href="">【黄山】雾隐深处有人家</a>
+					</li>
+					<li>04<i></i>
+						<a href="">【冬游张家界武陵源（两..</a>
+					</li>
+					<li>05<i></i>
+						<a href="">【雪の恋歌一一享受这一..</a>
+					</li>
+				</ul>
+			</div>
+			<!--右侧力推和人气结束-->
+			<div id="wrap">
+				<ul class="loee">
+					<li class="li-a"></li>
+					<li class="li-b"></li>
+					<li class="li-c"></li>
+					<li class="li-d"></li>
+				</ul>
+			</div>
+			<script src="js/p-data.js"></script>
+			<div class="video">
+				<!--<img src="img/p-img/tttt.jpg"/>-->
+     	 <video id="my-video" class="video-js" loop preload="auto" style="width: 100%; height: 100%;" autoplay="autoplay" data-setup="{}">
+        <source src="video/video.mp4" type="video/mp4">
+        <p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
+      </video>
+      <script src="js/video.min.js"></script> 
+      <script src="http://vjs.zencdn.net/5.19/lang/zh-CN.js"></script>
+      <script type="text/javascript">
+			var myPlayer = videojs('my-video');
+			videojs("my-video").ready(function(){
+				var myPlayer = this;
+				myPlayer.play();
+			});
+			  
+		</script> 
+
+			</div>
+		<div class="footer-ou">
+			<!--<div class="con-box">
+				<p>
+					<i class="iconfont icon-weibo"></i><span>关注微博</span>
+					<i class="iconfont icon-shouji2"></i><span>下载APP</span>
+				</p>
+				<p>
+					<span>©2018Baidu</span>
+					<a href="">使用百度前必读</a>
+					<a href="">百度旅游用户协议</a>
+					<a href="">联系我们</a>
+					<a href="">友情链接</a>
+				</p>
+			</div>-->
+			<div class="footerl">
+			<p>
+				<a href=" javascript:(0)">网站导航</a>|
+				<a href=" javascript:(0)">宾馆索引</a>|
+				<a href=" javascript:(0)">机票索引</a>|
+				<a href=" javascript:(0)">旅游索引</a>|
+				<a href=" javascript:(0)">商旅索引</a>|
+				<a href=" javascript:(0)">攻略索引</a>|
+				<a href=" javascript:(0)">关于携程</a>|
+				<a href=" javascript:(0)">企业公民</a>|
+				<a href=" javascript:(0)">诚聘英才</a>|
+				<a href=" javascript:(0)">智慧旅游</a>|
+				<a href=" javascript:(0)">分销联盟</a>|
+				<a href=" javascript:(0)">代理合作</a>|
+				<a href=" javascript:(0)">企业商旅</a>|
+				<a href=" javascript:(0)">中小企业差旅</a>|
+				<a href=" javascript:(0)">广告业务</a>|
+				<a href=" javascript:(0)">联系我们</a>
+			</p>
+			<p>
+				<a href=" javascript:(0)">酒店加盟</a>|
+				<a href=" javascript:(0)">旅游局及景区合作</a>|
+				<a href=" javascript:(0)">服务说明</a>|
+				<a href=" javascript:(0)">营业执照</a>|
+				<a href=" javascript:(0)">旅游度假资质</a>|
+				<a href=" javascript:(0)">保险理赔</a>|
+				<a href=" javascript:(0)">友情链接</a>|
+				<a href=" javascript:(0)">Copyright?</a>1999-2016
+				<a href=" javascript:(0)">ctrip.com.</a>All rights reserved. |
+				<a href=" javascript:(0)">ICP证：沪B2-20050130</a>
+			</p>
+			<p>
+				<a href=" javascript:(0)"><i class="icon"></i> 沪公网备31010502000018号</a>
+			</p>
+			<div class="footerl-j">
+				<a href=" javascript:(0)"><i class="img-icon1"></i>信用评级</a>
+				<a href=" javascript:(0)"><i class="img-icon2"></i>上海工商</a>
+				<a href=" javascript:(0)" class="img-icon3"></a>
+				<a href=" javascript:(0)"><i class="img-icon4"></i>网络社会</a>
+				<a href=" javascript:(0)" class="img-icon5"></a>
+				<a href=" javascript:(0)" class="img-icon6"></a>
+				<a href=" javascript:(0)" class="img-icon7"></a>
+			</div>
+		</div>
+		
+		<script src="js/Plane.js"></script>
+		<!--懒加载结束-->
+						<!--电梯-->
+		<div class="con-box-pp">
+			<div class="box-xx">
+				<a class="iconfont vv icon-top" title="回顶部"></a>
+				<a href="index.html" class="iconfont vv icon-fanhuishouye" title="回首页"></a>
+				<a href="food.html" class="iconfont vv icon-meishi" title="去美食"></a>
+			</div>
+		</div>
+		<script>
+						//			电梯
+			var loss=document.getElementsByClassName("box-xx")[0]
+			var fanhuishouye=document.getElementsByClassName("icon-top")[0]
+			window.onscroll=function(){
+				var scroll=document.documentElement.scrollTop||document.body.scrollTop
+				if(scroll>100){
+					loss.style.display="block"
+				}else{
+					loss.style.display="none"
+				}
+				console.log(scroll)
+			}
+			fanhuishouye.onclick=function(){
+				var time;
+				time=setInterval(function(){
+					var scroll=document.documentElement.scrollTop||document.body.scrollTop
+					document.body.scrollTop-=100
+					document.documentElement.scrollTop-=100
+					if(scroll==0){
+						clearInterval(time)
+					}
+				},20)
+			}
+		</script>
+	</body>
+
+</html>
